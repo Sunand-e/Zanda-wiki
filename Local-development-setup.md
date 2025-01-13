@@ -48,19 +48,19 @@ AZURE_CLIENT_ID=
 AZURE_CLIENT_SECRET=
 ```
 
-Run the containers:
+- Run the containers:
 
 `docker-compose up -d`
 
-Connect to the rails container:
+- Connect to the rails container:
 
 `docker exec -ti rails bash`
 
-Seed the database:
+- Seed the database:
 
 `rails db:seed`
 
-Exit the container:
+- Exit the container:
 
 `exit`
 
