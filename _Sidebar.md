@@ -1,6 +1,6 @@
 ### Codebase Access
 
-- Repositories
+- [Repositories](https://github.com/eLearning-Plus/MemberHub/wiki/Repositories)
 - [Branching / versioning guidelines](https://github.com/eLearning-Plus/MemberHub/wiki/Branching---versioning-guidelines)
 
 ### Environment Details
