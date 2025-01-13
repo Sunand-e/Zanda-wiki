@@ -48,6 +48,22 @@ AZURE_CLIENT_ID=
 AZURE_CLIENT_SECRET=
 ```
 
+Run the containers:
+
+`docker-compose up -d`
+
+Connect to the rails container:
+
+`docker exec -ti rails bash`
+
+Seed the database:
+
+`rails db:seed`
+
+Exit the container:
+
+`exit`
+
 **As the backend API is secured behind authentication, the easiest way to authenticate with the API is via the frontend. You can build the frontend, or use the frontend dev server. The build is faster and more responsive, whereas the dev server will let you see your change to the frontend in real time.**
 
 - Create a directory to hold the frontend export:
