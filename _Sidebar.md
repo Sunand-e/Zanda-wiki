@@ -1,56 +1,50 @@
 ### Codebase Access
 
 - Repositories
-- Branching / versioning guidelines
+- [Branching / versioning guidelines](https://github.com/eLearning-Plus/MemberHub/wiki/Branching---versioning-guidelines)
 
 ### Environment Details
-- Local development setup
-- Staging and production environment details
-- Configuration files
-- Automation tools
+- [Local development setup](https://github.com/eLearning-Plus/MemberHub/wiki/Local-development-setup)
+- [Staging and production environment details](https://github.com/eLearning-Plus/MemberHub/wiki/Staging-and-production-environment-details)
+- [Configuration files](https://github.com/eLearning-Plus/MemberHub/wiki/Configuration-files)
+- [Automation tools](https://github.com/eLearning-Plus/MemberHub/wiki/Automation-tools)
 
 ### API Documentation
-- RESTful API endpoints, methods, and parameters
-- GraphQL schema and queries
-- Authentication mechanisms
+- [RESTful API endpoints, methods, and parameters](https://github.com/eLearning-Plus/MemberHub/wiki/RESTful-API-endpoints)
+- [GraphQL schema and queries](https://github.com/eLearning-Plus/MemberHub/wiki/GraphQL-schema-and-queries)
+- [Authentication mechanisms](https://github.com/eLearning-Plus/MemberHub/wiki/Authentication-mechanisms)
 
 ### Docker Setup
-- Docker container setup and configurations
-- Docker dependencies
+- [Docker container setup and configurations](https://github.com/eLearning-Plus/MemberHub/wiki/Docker-container-setup)
+- [Docker dependencies](https://github.com/eLearning-Plus/MemberHub/wiki/Docker-dependencies)
 
 ### Database Details
-- Schema and structure
-- Backup and restoration processes
+- [Schema and structure](https://github.com/eLearning-Plus/MemberHub/wiki/Database-schema-and-structure)
+- [Backup and restoration processes](https://github.com/eLearning-Plus/MemberHub/wiki/Database-backup-and-restoration-processes)
 
-### Third-Party Integrations
-- List of all third-party tools and services integrated
+### [Third-Party Integrations](https://github.com/eLearning-Plus/MemberHub/wiki/Third%E2%80%90Party-Integrations)
 
 ### Existing Processes
-- Deployment and release process
-- Testing and CI/CD pipelines
+- [Deployment and release process](https://github.com/eLearning-Plus/MemberHub/wiki/Deployment-and-release-process)
+- [CI/CD pipelines and Testing](https://github.com/eLearning-Plus/MemberHub/wiki/CI-CD-pipelines-and-Testing)
 
-### Entities
-- Users
-- Content Items
- - List all content items
-
-	- Courses
-		- Sections
-		- Modules
-			- Lessons
-			- SCORM Modules
-			- Quizzes
-				- Questions
-	- Resources
+### [Entities](https://github.com/eLearning-Plus/MemberHub/wiki/Entities)
+- [Tenants](https://github.com/eLearning-Plus/MemberHub/wiki/Tenants)
+- [Users](https://github.com/eLearning-Plus/MemberHub/wiki/Users)
+- [Content Items](https://github.com/eLearning-Plus/MemberHub/wiki/Content-Items)
+	- [Courses](https://github.com/eLearning-Plus/MemberHub/wiki/Courses)
+		- [Sections](https://github.com/eLearning-Plus/MemberHub/wiki/Sections)
+		- [Modules](https://github.com/eLearning-Plus/MemberHub/wiki/Course-modules)
+			- [Lessons](https://github.com/eLearning-Plus/MemberHub/wiki/Lessons)
+			- [SCORM Modules](https://github.com/eLearning-Plus/MemberHub/wiki/Scorm-modules)
+			- [Quizzes](https://github.com/eLearning-Plus/MemberHub/wiki/Quizzes)
+				- [Questions](https://github.com/eLearning-Plus/MemberHub/wiki/Questions)
+	- [Resources](https://github.com/eLearning-Plus/MemberHub/wiki/Resources)
 	
-- Groups
-	- Organisations
-	
-- Roles (+ Capabilities)
-
-	- User Roles
-
-	- User ContentItem Roles
-
-	- User Group Roles
+- [Groups](Groups)
+	- [Organisations](https://github.com/eLearning-Plus/MemberHub/wiki/Organisations)
+- [Roles and Capabilities](https://github.com/eLearning-Plus/MemberHub/wiki/Roles-and-Capabilities)
+	- [User Roles](https://github.com/eLearning-Plus/MemberHub/wiki/Global-user-roles)
+	- [User ContentItem Roles](https://github.com/eLearning-Plus/MemberHub/wiki/User-ContentItem-Roles)
+	- [User Group Roles](https://github.com/eLearning-Plus/MemberHub/wiki/User-Group-Roles)
 
