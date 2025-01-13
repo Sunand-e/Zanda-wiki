@@ -48,7 +48,11 @@ AZURE_CLIENT_ID=
 AZURE_CLIENT_SECRET=
 ```
 
-As the backend API is secured behind authentication, the easiest way to authenticate with the API is via the frontend.
+**As the backend API is secured behind authentication, the easiest way to authenticate with the API is via the frontend. You can build the frontend, or use the frontend dev server. The build is faster and more responsive, whereas the dev server will let you see your change to the frontend in real time.**
+
+- Create a directory to hold the frontend export:
+
+mkdir -p ../learning-platform-frontend-export
 
 - In the root directory (the one containing `learning-platform-api` directory), clone the frontend:
 
@@ -67,7 +71,7 @@ As the backend API is secured behind authentication, the easiest way to authenti
 
 `npm run build`
 
-- Move the exported files into the FRONTEND_DIRECTORY if necessary:
+- Move the exported files into the `FRONTEND_DIRECTORY` if necessary:
 
-`learning-platform-frontend-export`
+`mv ./out/* ../learning-platform-frontend-export`
 
