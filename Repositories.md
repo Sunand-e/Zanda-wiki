@@ -14,9 +14,12 @@ Local Docker Setup: Includes configuration files and scripts (Dockerfile, docker
 
 ### Branching
 The core branching setup is relatively straightforward:
-main - this is the branch containing the latest 'stable' version of the codebase
-production - anything pushed to this branch will trigger the CI/CD workflow for deploying to production.
-staging - 
+
+**main** - this is the branch containing the latest 'stable' version of the codebase
+
+**production** - anything pushed to this branch will trigger the CI/CD workflow for deploying to the production environment.
+
+**staging** - anything pushed to this branch will trigger the CI/CD workflow for deploying to the staging environment.
 
 All other branches in the repo are either stale, or contain unfinished features. These branches can either be discarded, or kept for aiding in future developments relating to the branch names.
 
