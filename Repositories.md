@@ -31,7 +31,7 @@ This repository houses the frontend code for the LMS, responsible for delivering
 
 #### **Key Features**
 
--   **Next.js for Page Routing and Static Exports:** Next.js is used to handle client-side routing and generate static exports during the CI/CD pipeline. This ensures the frontend is optimized for performance, with fast loading times and efficient content delivery, without relying on a server-rendered setup.
+-   **Next.js for Page Routing and Static Exports:** Next.js is used to handle client-side routing using the [Pages Router](https://nextjs.org/docs/pages) and generate a [static export](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports) during the CI/CD pipeline. This approach eliminates the need for server-side rendering in production. 
 -   **Apollo Client for GraphQL Communication:** The frontend uses Apollo Client for efficient GraphQL query and mutation handling. It manages communication with the backend LMS API while leveraging caching mechanisms to minimize redundant network requests and improve data retrieval efficiency.
 -   **State Management with Zustand:** Zustand is employed alongside Apollo Client for managing local state and handling UI-related logic that isn't directly tied to the API, offering lightweight and performant state management.
 -   **React-based Responsive UI:** Built with React, the frontend delivers a clean, intuitive, and responsive interface that adapts seamlessly to various devices and screen sizes.
@@ -40,5 +40,5 @@ This repository houses the frontend code for the LMS, responsible for delivering
 
 #### **Notes**
 
--   **Static Export Workflow:** During the CI/CD pipeline, Next.js generates a fully static version of the site, optimizing it for deployment to a static hosting environment. This approach eliminates the need for server-side rendering in production, ensuring scalability and simplified infrastructure.
--   **Apollo and Zustand Usage:** Apollo Client manages API-related state, while Zustand is used for lightweight, standalone state management needs like UI controls or session data.
+-   **Static Export Workflow:** During the CI/CD pipeline, Next.js generates a fully static version of the site. 
+-   **Apollo and Zustand Usage:** Apollo Client manages API-related state, while Zustand is used for any other complex state management needs, e.g. table state data.
