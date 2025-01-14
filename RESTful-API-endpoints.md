@@ -33,7 +33,7 @@ POST
     "profile_image_url": null,
     "settings": {}
   },
-  "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiNzAyOWJkNjUtMjFlYi00ODRiLWE2NGQtNGM2ZWRhODNhZTUzIiwicnNrIjoiOGYifQ.assynLAHpNkNiHu226BQmmJTNNppgGfksT0w7UaF4us",
+  "token": "[REDACTED]",
   "tenant": {
     "id": "3889ae06-ecc6-4705-8c64-f794c8ae389f",
     "name": "eLearning Plus",
@@ -70,44 +70,7 @@ DELETE
 }
 ```
 
-## Authorize
-
-api/v1/user/authorize
-
-POST
-
-### Description
-
-Set the header with Authorization and hit the API.
-
-### Response
-
-```json
-{
-  "current_user": {
-    "id": "7029bd65-21eb-484b-a64d-4c6eda83ae53",
-    "first_name": "Arun",
-    "last_name": "Patil",
-    "email": "test@example.com",
-    "password": null,
-    "tenant_id": "8dbb3a1d-98f6-4a75-a0dc-67f4470b400e",
-    "created_at": "2021-07-05T18:08:29.450Z",
-    "updated_at": "2021-07-12T07:58:38.515Z",
-    "user_type": "Tenant Admin",
-    "status": "active"
-  },
-  "tenant": {
-    "id": "8dbb3a1d-98f6-4a75-a0dc-67f4470b400e",
-    "name": "Kreatio Software",
-    "short_name": "kreatio",
-    "url": "kreatio.elearningplus.co.uk",
-    "created_at": "2021-07-05T18:08:27.628Z",
-    "updated_at": "2021-07-05T18:08:27.628Z"
-  }
-}
-```
-
-## Sign UP
+## Sign Up
 
 api/v1/users
 
@@ -120,7 +83,7 @@ POST
   "user": {
     "first_name": "Arun",
     "last_name": "Patil",
-    "email": "aruntest8@gmail.com",
+    "email": "test@example.com",
     "invite": true
   }
 }
@@ -134,7 +97,7 @@ POST
     "id": "76e0c2c5-d36c-4478-8c08-f85307ff688f",
     "first_name": "Arun",
     "last_name": "Patil",
-    "email": "aruntest8@gmail.com",
+    "email": "test@example.com",
     "tenant_id": "8dbb3a1d-98f6-4a75-a0dc-67f4470b400e",
     "created_at": "2022-04-01T05:26:44.198Z",
     "updated_at": "2022-04-01T05:26:44.335Z",
@@ -147,7 +110,7 @@ POST
 }
 ```
 
-## Invitation Accept
+## Accept User Invitation
 
 api/v1/users/invitation/accept
 
@@ -169,7 +132,7 @@ PUT
 {
   "status": "Invitation Accepted!",
   "user": {
-    "email": "aruntest8@gmail.com",
+    "email": "test@example.com",
     "id": "76e0c2c5-d36c-4478-8c08-f85307ff688f",
     "first_name": "Arun",
     "last_name": "Patil",
@@ -182,35 +145,11 @@ PUT
     "password": "12345",
     "from_bulk": null
   },
-  "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiNzZlMGMyYzUtZDM2Yy00NDc4LThjMDgtZjg1MzA3ZmY2ODhmIiwicnNrIjoiZDQifQ.6KURGuBDx2CL_dImd7gzDl-q32Vwuv1XxaNqYAdSPI0"
+  "token": "[REDACTED]"
 }
 ```
 
-## Send confirmation mail
-
-URL:  <http://127.0.0.1:3020/api/v1/users/confirmation>
-
-**Method: \'POST**
-
-#### Body:
-
-```json
-{
-  "user": {
-    "email": "your email id here"
-  }
-}
-```
-
-#### Response:
-
-```json
-{
-  "message": "You will receive an email with instructions for how to confirm your email address in a few minutes."
-}
-```
-
-## To upload Media
+## Upload media items
 
 uploads/upload_media
 
@@ -327,49 +266,6 @@ POST
 }
 ```
 
-Public Sign up
-
-api/v1/users/public_sign_up
-
-POST
-
-WITHOUT AUTHORIZATION TOKEN
-
-#### Body:
-
-```json
-{
-  "first_name": "test",
-  "last_name": "test",
-  "email": "test@gmail.com",
-  "password": "12345",
-  "password_confirmation": "12345",
-  "profile_image": "(FILE UPLOAD)"
-}
-```
-
-#### Response:
-
-```json
-{
-  "user": {
-    "id": "93132bf3-3e28-4e27-8f64-17574e11d45e",
-    "first_name": "qwqerty",
-    "last_name": "ytrewq",
-    "email": "qasew123qhdfg@gmail.com",
-    "tenant_id": "8dbb3a1d-98f6-4a75-a0dc-67f4470b400e",
-    "created_at": "2022-04-19T09:06:10.582Z",
-    "updated_at": "2022-04-19T09:06:10.633Z",
-    "user_type": null,
-    "status": "active",
-    "deleted_at": null,
-    "password": "12345",
-    "from_bulk": null,
-    "profile_image_url": "http://127.0.0.1:3020/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxtWmpRMVltWTJPQzFqTjJNNExUUXlOalF0T0RrME5pMHdZbVExTlRBd1lUTXhZVFVHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--2e81f236f4c69a00463c67c23f7a7933c8ca4472/DSC_0264%20(1).JPG"
-  }
-}
-```
-
 ## Tenant settings
 
 api/v1/tenant/setting
@@ -401,8 +297,8 @@ PUT
 #### Response :
 
 ```json
-{
-  "tenant": {
+{​​​​​​
+  "tenant": {​​​​​​
     "id": "b9adb12d-c679-449a-bf70-81091fd9db41",
     "name": "Kreatio Software",
     "short_name": "kreatio",
@@ -410,55 +306,12 @@ PUT
     "created_at": "2022-04-08T07:06:46.469Z",
     "updated_at": "2022-08-01T13:03:54.194Z",
     "deleted_at": null,
-    "settings": {
-      "public_settings": {}
-    },
-    "parent_id": null
-  },
-  "user": {
-    "id": "93132bf3-3e28-4e27-8f64-17574e11d45e",
-    "first_name": "qwqerty",
-    "last_name": "ytrewq",
-    "email": "qasew123qhdfg@gmail.com",
-    "tenant_id": "8dbb3a1d-98f6-4a75-a0dc-67f4470b400e",
-    "created_at": "2022-04-19T09:06:10.582Z",
-    "updated_at": "2022-04-19T09:06:10.633Z",
-    "user_type": null,
-    "status": "active",
-    "deleted_at": null,
-    "password": "12345",
-    "from_bulk": null,
-    "profile_image_url": "http://127.0.0.1:3020/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxtWmpRMVltWTJPQzFqTjJNNExUUXlOalF0T0RrME5pMHdZbVExTlRBd1lUTXhZVFVHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--2e81f236f4c69a00463c67c23f7a7933c8ca4472/DSC_0264%20(1).JPG"
-  }
-}
-```
-
-Body as a **form-data**
-
-**key : **profile_image**, value :  **file
-
-**key : **login_image**, value :** file
-
-**key : **tenant_id**, value :** text  -  (optional)
-
-#### Response :
-
-```json
-{
-  "tenant": {
-    "id": "b9adb12d-c679-449a-bf70-81091fd9db41",
-    "name": "Kreatio Software",
-    "short_name": "kreatio",
-    "url": "127.0.0.1",
-    "created_at": "2022-04-08T07:06:46.469Z",
-    "updated_at": "2022-08-01T13:03:54.194Z",
-    "deleted_at": null,
-    "settings": {
-      "public_settings": {}
-    },
+    "settings":  {
+      "public_settings": { ... }
+    }
     "parent_id": null,
-    "profile_logo": "http://127.0.0.1:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWsyT1RGbE56VTFZeTA0TXpVMUxUUTBZV1F0T1RJek5DMHpPV1V4WVRReU9UWTJaV1lHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--16580f9935bdfc8005e8d5df1e72d9983cf6d464/skype2.jpeg",
-    "login_logo": "http://127.0.0.1:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt4T0dKa01EbG1PQzFtWTJWa0xUUTBNRE10T0RJNU9TMW1OV1V6WTJGbU56SXpNekVHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--c4b1465c3b7b717c93197568da5f8ce183c7196b/skype2copy.jpeg"
+    "profile_logo":   "http://127.0.0.1:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJ BaEpJaWsyT1RGbE56VTFZeTA0TXpVMUxUUTBZV1F0T1RJek5DMHpPV1V4WVRReU9UWTJaV1lHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--16580f9935bdfc8005e8d5df1e72d9983cf6d464/skype2.jpeg",
+    "login_logo":   "http://127.0.0.1:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt4T0dKa01EbG1PQzFtWTJWa0xUUTBNRE10T0RJNU9TMW1OV1V6WTJGbU56SXpNekVHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--c4b1465c3b7b717c93197568da5f8ce183c7196b/skype2copy.jpeg"
   }
 }
 ```
@@ -633,10 +486,6 @@ Method: GET
 }​​​​​
 ```
 
-
-
-
-
 ## Update Password
 
 api/v1/user/update_password
@@ -695,19 +544,6 @@ PUT
 }​​​​​​​​​​​​​​​​​​​
 ```
 
-
-## User Email Confirmation
-
-api/v1/users/confirmation?confirmation_token=[string]
-
-GET
-
-#### Response: 
-```json
-{
-  ​​​​​​"confirmed":"Your email address has been successfully confirmed."
-}
-```
 ## Act as another user
 
 api/v1/user/act_as/[user_id]
@@ -784,3 +620,17 @@ Response:
   "message": "Fonts uploaded and metadata set successfully"
 }
 ```
+
+Login
+Log out
+Sign Up
+Send invitation
+Accept invitation
+Update password
+Password reset
+Act as another user
+Upload tenant font
+Tenant settings
+Update Tenant logos
+Upload media items
+Generate meta data
