@@ -1,36 +1,53 @@
-Welcome to the Zanda360 Rails API repository!
+Welcome to the Zanda360 Learning Platform documentation.
 
- Zanda360 is a comprehensive learning management system (LMS) designed to facilitate the creation, management, and distribution of training/educational content. This repository contains the source code for the Zanda360 Rails API.
+### Codebase Access
 
-## Features
+- [Repositories](https://github.com/eLearning-Plus/MemberHub/wiki/Repositories)
+- [Branching / versioning guidelines](https://github.com/eLearning-Plus/MemberHub/wiki/Branching---versioning-guidelines)
 
-- **Multiple Tenancies**: Support for multiple tenants, allowing separate management of users and content for different organizations.
-- **Course Builder**: Create courses with sections, lessons, and quizzes.
-- **Quiz Builder**: Build quizzes with single and multiple-choice questions.
-- **Resource Library**: Manage documents, workshops, webinars, podcasts, process flows, and snapshots.
-- **User Roles & Capabilities**: Manage user roles and content/feature access using capabilities.
-- **Groups/Organisations**: Organize users within tenants.
-- **User Actions on Content Pieces**: Track user interactions with content.
-- **Reporting**: Generate reports on course progress and user performance.
+### Environment Details
+- [Local development setup](https://github.com/eLearning-Plus/MemberHub/wiki/Local-development-setup)
+- [Staging and production environment details](https://github.com/eLearning-Plus/MemberHub/wiki/Staging-and-production-environment-details)
+- [Configuration files](https://github.com/eLearning-Plus/MemberHub/wiki/Configuration-files)
+- [Automation tools](https://github.com/eLearning-Plus/MemberHub/wiki/Automation-tools)
 
-## Local Setup
+### API Documentation
+- [RESTful API endpoints, methods, and parameters](https://github.com/eLearning-Plus/MemberHub/wiki/RESTful-API-endpoints)
+- [GraphQL schema and queries](https://github.com/eLearning-Plus/MemberHub/wiki/GraphQL-schema-and-queries)
+- [Authentication mechanisms](https://github.com/eLearning-Plus/MemberHub/wiki/Authentication-mechanisms)
 
-To set up the application locally, follow these steps:
+### Docker Setup
+- [Docker container setup and configurations](https://github.com/eLearning-Plus/MemberHub/wiki/Docker-container-setup)
+- [Docker dependencies](https://github.com/eLearning-Plus/MemberHub/wiki/Docker-dependencies)
 
-1. Create the local Docker containers:
-    ```sh
-    docker-compose up -d
-    ```
+### Database Details
+- [Schema and structure](https://github.com/eLearning-Plus/MemberHub/wiki/Database-schema-and-structure)
+- [Backup and restoration processes](https://github.com/eLearning-Plus/MemberHub/wiki/Database-backup-and-restoration-processes)
 
-2. That's it.
+### [Third-Party Integrations](https://github.com/eLearning-Plus/MemberHub/wiki/Third%E2%80%90Party-Integrations)
 
-## Description
+### Existing Processes
+- [Deployment and release process](https://github.com/eLearning-Plus/MemberHub/wiki/Deployment-and-release-process)
+- [CI/CD pipelines and Testing](https://github.com/eLearning-Plus/MemberHub/wiki/CI-CD-pipelines-and-Testing)
 
-- **Gemfile**: Describes the gem dependencies required to execute associated Ruby code.
-- **Gemfile.lock**: Records the exact versions of gems installed, ensuring consistency across different environments.
+### [Entities](https://github.com/eLearning-Plus/MemberHub/wiki/Entities)
+- [Tenants](https://github.com/eLearning-Plus/MemberHub/wiki/Tenants)
+- [Users](https://github.com/eLearning-Plus/MemberHub/wiki/Users)
+- [Content Items](https://github.com/eLearning-Plus/MemberHub/wiki/Content-Items)
+	- [Courses](https://github.com/eLearning-Plus/MemberHub/wiki/Courses)
+		- [Sections](https://github.com/eLearning-Plus/MemberHub/wiki/Sections)
+		- [Modules](https://github.com/eLearning-Plus/MemberHub/wiki/Course-modules)
+			- [Lessons](https://github.com/eLearning-Plus/MemberHub/wiki/Lessons)
+			- [SCORM Modules](https://github.com/eLearning-Plus/MemberHub/wiki/Scorm-modules)
+			- [Quizzes](https://github.com/eLearning-Plus/MemberHub/wiki/Quizzes)
+				- [Questions](https://github.com/eLearning-Plus/MemberHub/wiki/Questions)
+	- [Resources](https://github.com/eLearning-Plus/MemberHub/wiki/Resources)
+	
+- [Groups](Groups)
+	- [Organisations](https://github.com/eLearning-Plus/MemberHub/wiki/Organisations)
+- [Roles and Capabilities](https://github.com/eLearning-Plus/MemberHub/wiki/Roles-and-Capabilities)
+	- [User Roles](https://github.com/eLearning-Plus/MemberHub/wiki/Global-user-roles)
+	- [User ContentItem Roles](https://github.com/eLearning-Plus/MemberHub/wiki/User-ContentItem-Roles)
+	- [User Group Roles](https://github.com/eLearning-Plus/MemberHub/wiki/User-Group-Roles)
 
-## GraphQL Integration
-
-MemberHub uses GraphQL for API interactions. For more information on GraphQL and its implementation with Rails, refer to the following resources:
-- [GraphQL Ruby](https://graphql-ruby.org/): A Ruby gem for building GraphQL APIs with Ruby.
-- [GraphQL on Rails](https://evilmartians.com/chronicles/graphql-on-rails-1-from-zero-to-the-first-query)
+y)
