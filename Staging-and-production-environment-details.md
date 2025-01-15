@@ -42,6 +42,9 @@ There is one load balancer for both the staging and production environments - ce
 
 The load balancer forwards to the target group associated with the ECS nginx service.
 
+## RDS
+A multi-AZ PostgreSQL instance is used as the database which the rails API ECS task has access to.
+
 ## Parameter Store
 
 AWS Systems Manager's **Parameter Store** is used to securely store various secrets for the platform:
