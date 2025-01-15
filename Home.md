@@ -9,7 +9,6 @@ Welcome to the Zanda360 Learning Platform documentation.
 - [Local development setup](https://github.com/eLearning-Plus/MemberHub/wiki/Local-development-setup)
 - [Staging and production environment details](https://github.com/eLearning-Plus/MemberHub/wiki/Staging-and-production-environment-details)
 - [Configuration files](https://github.com/eLearning-Plus/MemberHub/wiki/Configuration-files)
-- [Automation tools](https://github.com/eLearning-Plus/MemberHub/wiki/Automation-tools)
 
 ### API Documentation
 - [RESTful API endpoints, methods, and parameters](https://github.com/eLearning-Plus/MemberHub/wiki/RESTful-API-endpoints)
