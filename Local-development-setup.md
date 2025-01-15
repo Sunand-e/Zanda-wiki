@@ -11,10 +11,8 @@ This development setup leverages **Docker Compose** to orchestrate the applicati
 2.  **NGINX**:
 
     -   Listens on **port 80**.
+    -   Serves static frontend files from a local directory, mounted to the container as a volume.
     -   Acts as a reverse proxy, forwarding requests to the Rails application container.
-3.  **Data Persistence**:
-
-    -   Utilizes volumes for data storage, ensuring persistence across container restarts.
 
 #### Frontend
 
@@ -31,11 +29,11 @@ This development setup leverages **Docker Compose** to orchestrate the applicati
 
 -   Local directories are mounted into containers as volumes to allow seamless development and testing. For instance:
     -   The frontend's static assets are mounted from a specified local directory.
-    -   Logs and temporary files are also managed using Docker volumes for convenience and isolation.
+    -   Logs and temporary files are managed using Docker volumes.
 
-See the docker-compose file for more info
+See the docker-compose file for more info.
 
-#### To set up a fully local deployment of the platform:
+### Setting up a fully local deployment of the platform:
 
 - Clone the API repo. This contains the docker-compose file for container orchestration:
 
@@ -103,6 +101,8 @@ AZURE_CLIENT_SECRET=
 
 **As the backend API is secured behind authentication, the easiest way to authenticate with the API is via the frontend. You can build the frontend, or use the frontend dev server. The build is faster and more responsive, whereas the dev server will let you see your change to the frontend in real time.**
 
+### Frontend: static export build
+
 - Create a directory to hold the frontend export:
 
 mkdir -p ../learning-platform-frontend-export
@@ -128,3 +128,12 @@ mkdir -p ../learning-platform-frontend-export
 
 `mv ./out/* ../learning-platform-frontend-export`
 
+You should now be able to access the frontend at 127.0.0.1:80
+
+### Frontend: development build
+
+- Run the frontend dev server. This will start the next.js dev environment, using a [custom server](https://nextjs.org/docs/pages/building-your-application/configuring/custom-server) located in the frontend repository (`server.js`), which is a basic express server. The reason for the custom server is to allow for redirects for API requests to the rails container running in docker.
+
+`npm run dev`
+
+The frontend dev environment should be available at: `127.0.0.1:3001`
