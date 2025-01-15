@@ -1,4 +1,41 @@
-**To set up a fully local deployment of the platform:**
+#### Overview
+
+This development setup leverages **Docker Compose** to orchestrate the application and its associated services. The backend is implemented with Rails, proxied by NGINX for request handling, while the frontend has two modes of operation: production (static export) and development.
+
+#### Backend Services
+
+1.  **Rails Application**:
+
+    -   Runs inside a Docker container.
+    -   Processes API requests forwarded by NGINX.
+2.  **NGINX**:
+
+    -   Listens on **port 80**.
+    -   Acts as a reverse proxy, forwarding requests to the Rails application container.
+3.  **Data Persistence**:
+
+    -   Utilizes volumes for data storage, ensuring persistence across container restarts.
+
+#### Frontend
+
+1.  **Production Mode**:
+
+    -   A statically exported frontend is stored in a local directory.
+    -   This directory is mounted as a volume in the Docker Compose configuration to be served by the containers.
+2.  **Development Mode**:
+
+    -   Runs on **port 3001** using its own Express server.
+    -   The Express server forwards API requests to the backend via NGINX.
+
+#### Volume Mounting
+
+-   Local directories are mounted into containers as volumes to allow seamless development and testing. For instance:
+    -   The frontend's static assets are mounted from a specified local directory.
+    -   Logs and temporary files are also managed using Docker volumes for convenience and isolation.
+
+See the docker-compose file for more info
+
+#### To set up a fully local deployment of the platform:
 
 - Clone the API repo. This contains the docker-compose file for container orchestration:
 
