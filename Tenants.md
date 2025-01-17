@@ -40,24 +40,21 @@ The Tenant model has notable relationships with other key entities in the platfo
 
 1.  **Onboarding**:
     
-    *   Super Admins can onboard new tenants via an interface powered by the **GraphQL API**.
+    *   Super Admins can onboard new tenants via the admin interface, which performs the creation request via the **GraphQL API**.
         
-    *   This process includes assigning the tenant's initial settings and relationships.
+    *   This process includes assigning the tenant's initial settings and images.
         
 2.  **Customizations**:
     
     *   Customizations for tenants are currently managed by the Super Admin.
         
     *   The platform supports rolling out customization capabilities to tenant admins with additional development.
-        
 
 ### **Access Control and Roles**
 
-1.  **User Roles and Capabilities**:
+1.  **Roles and Capabilities**:
     
-    *   Roles and capabilities are assigned at the user level.
-        
-    *   These capabilities can be modified on a per-tenant basis using the tenant\_setting\_roles method and the self.has\_capability? method in the User model.
+    *   Roles and capabilities are assigned at the user level, however these capabilities can be modified on a per-tenant basis. See the `tenant_setting_roles` and `self.has_capability?` methods in the `User` model.
         
 
 ### **Security Considerations**
