@@ -19,8 +19,7 @@ Devise routes are in [config/routes.rb](https://github.com/eLearning-Plus/Member
 
 Devise is implemented for the user model in [app/models/user.rb](https://github.com/eLearning-Plus/MemberHub/blob/main/app/models/user.rb)
 
-JWTs are used for authentication. **THESE ARE CURRENTLY STORED IN LOCALSTORAGE - this should be changed to secure HttpOnly cookies**. an implementation of this has been attempted, alongside Azure ActiveDirectory (EntraID) SSO, in the [sso branch](https://github.com/eLearning-Plus/MemberHub/tree/sso).
-
+JWTs are used for authentication. **THESE ARE CURRENTLY STORED IN LOCALSTORAGE - this should be changed to secure HttpOnly cookies**. an implementation of this has been attempted, alongside Azure ActiveDirectory (EntraID) SSO, in the [sso branch](https://github.com/eLearning-Plus/MemberHub/tree/sso), but it requires further development (namely CSRF-token implementation improvements).
 
 ### New User flow
 
