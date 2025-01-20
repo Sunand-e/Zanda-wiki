@@ -1,3 +1,5 @@
+### Authentication mechanisms
+
 The [Devise](https://github.com/heartcombo/devise) gem is used to handle user authentication with the following configurations:
 
 - Email-based authentication with case-insensitive and whitespace-stripped email addresses.
