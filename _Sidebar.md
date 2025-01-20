@@ -12,6 +12,7 @@
 - [RESTful API endpoints, methods, and parameters](https://github.com/eLearning-Plus/MemberHub/wiki/RESTful-API-endpoints)
 - [GraphQL schema and queries](https://github.com/eLearning-Plus/MemberHub/wiki/GraphQL-schema-and-queries)
 - [Authentication mechanisms](https://github.com/eLearning-Plus/MemberHub/wiki/Authentication-mechanisms)
+- [New User flow](https://github.com/eLearning-Plus/MemberHub/wiki/New-User-flow)
 
 ### Docker Setup
 - [Docker container setup and configurations](https://github.com/eLearning-Plus/MemberHub/wiki/Docker-container-setup)
