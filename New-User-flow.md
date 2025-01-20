@@ -1,0 +1,3 @@
+The common way in which users are set up on the platform for each new client is that the Super Admin creates a new tenant, and creates a new user with the global 'Tenant Admin' role for the client admin's email address. The tenant admin then imports users via a CSV (or adds them manually). Each user is assigned the global 'Learner' role. During or after user creation, the users can be sent an 'invitation'. Currently, public sign-up is not used, and so currently, the email confirmation is currently skipped.
+
+Note - Each CSV import is stored using the BulkImport and BulkImportUser models. These BulkImports are currently unused.
