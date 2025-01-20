@@ -1,29 +1,21 @@
-The [Devise](https://github.com/heartcombo/devise) gem is used for authentication.
-
-The Devise config is found at: https://github.com/eLearning-Plus/MemberHub/blob/main/config/initializers/devise.rb
-
-Devise is being used to handle user authentication with the following configurations:
+The [Devise](https://github.com/heartcombo/devise) gem is used to handle user authentication with the following configurations:
 
 - Email-based authentication with case-insensitive and whitespace-stripped email addresses.
-- Custom mailer settings using environment variables.
-- ActiveRecord as the ORM.
-- Session storage skipped for HTTP authentication.
-- CSRF token cleanup on authentication.
-- Password hashing with a configurable cost factor and length validation.
-- Remember me functionality with token invalidation on sign out.
-- Email reconfirmation for email changes.
-- Password recovery with a specified time interval.
-- Scoped views for Devise.
-- Sign out via the DELETE HTTP method.
+- Custom mailer settings using environment variables
+- Session storage skipped for HTTP authentication
+- CSRF token cleanup on authentication
+- Remember me functionality
+- Email reconfirmation for email changes
+- Password recovery
+- Sign out via the DELETE HTTP method
+- Invitations, registrations and confirmations
+- Integration with Doorkeeper for OAuth 2.0 authentication
 
-Devise is being used in the [User model](https://github.com/eLearning-Plus/MemberHub/blob/main/app/models/user.rb) to handle various aspects of user authentication and management, including:
+Devise config is found at: [config/initializers/devise.rb](https://github.com/eLearning-Plus/MemberHub/blob/main/config/initializers/devise.rb)
+Devise routes are in routes.rb
 
-Email-based authentication
-User registration and account management
-Email confirmation
-Password recovery
-Remember me functionality
-Tracking user sign-ins
-Inviting users to the application
-Integrating with Doorkeeper for OAuth 2.0 authentication
-These features provide a comprehensive authentication solution for managing users within the application.
+### New User flow
+
+The common way in which users are set up on the platform for each new client is that the Super Admin creates a new tenant, and creates a new user with the global 'Tenant Admin' role for the client admin's email address. The tenant admin then imports users via a CSV (or adds them manually). Each user is assigned the global 'Learner' role. During or after user creation, the users can be sent an 'invitation'. Currently, public sign-up is not used, and so currently, the email confirmation is currently skipped.
+
+Note - Each CSV import is stored using the `BulkImport` and `BulkImportUser` models. These `BulkImport`s are currently unused.
