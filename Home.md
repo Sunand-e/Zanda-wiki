@@ -17,7 +17,6 @@ Welcome to the Zanda360 Learning Platform documentation.
 
 ### Docker Setup
 - [Docker container setup and configurations](https://github.com/eLearning-Plus/MemberHub/wiki/Docker-container-setup)
-- [Docker dependencies](https://github.com/eLearning-Plus/MemberHub/wiki/Docker-dependencies)
 
 ### Database Details
 - [Schema and structure](https://github.com/eLearning-Plus/MemberHub/wiki/Database-schema-and-structure)
@@ -48,5 +47,3 @@ Welcome to the Zanda360 Learning Platform documentation.
 	- [User Roles](https://github.com/eLearning-Plus/MemberHub/wiki/Global-user-roles)
 	- [User ContentItem Roles](https://github.com/eLearning-Plus/MemberHub/wiki/User-ContentItem-Roles)
 	- [User Group Roles](https://github.com/eLearning-Plus/MemberHub/wiki/User-Group-Roles)
-
-y)
