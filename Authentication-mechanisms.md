@@ -2,3 +2,16 @@ The [Devise](https://github.com/heartcombo/devise) gem is used for authenticatio
 
 The Devise config is found at: https://github.com/eLearning-Plus/MemberHub/blob/main/config/initializers/devise.rb
 
+Devise is being used to handle user authentication with the following configurations:
+
+- Email-based authentication with case-insensitive and whitespace-stripped email addresses.
+- Custom mailer settings using environment variables.
+- ActiveRecord as the ORM.
+- Session storage skipped for HTTP authentication.
+- CSRF token cleanup on authentication.
+- Password hashing with a configurable cost factor and length validation.
+- Remember me functionality with token invalidation on sign out.
+- Email reconfirmation for email changes.
+- Password recovery with a specified time interval.
+- Scoped views for Devise.
+- Sign out via the DELETE HTTP method.
