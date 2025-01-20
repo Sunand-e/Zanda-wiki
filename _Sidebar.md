@@ -15,7 +15,6 @@
 
 ### Docker Setup
 - [Docker container setup and configurations](https://github.com/eLearning-Plus/MemberHub/wiki/Docker-container-setup)
-- [Docker dependencies](https://github.com/eLearning-Plus/MemberHub/wiki/Docker-dependencies)
 
 ### Database Details
 - [Schema and structure](https://github.com/eLearning-Plus/MemberHub/wiki/Database-schema-and-structure)
