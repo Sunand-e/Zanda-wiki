@@ -5,4 +5,4 @@ The project has the following noteable config files:
 - [docker-compose.yml](https://github.com/eLearning-Plus/MemberHub/blob/main/docker-compose.yml)
 - [Dockerfile for nginx](https://github.com/eLearning-Plus/MemberHub/blob/main/docker/nginx/Dockerfile) - the Dockerfile for the nginx container
 - [nginx.conf](https://github.com/eLearning-Plus/MemberHub/blob/main/docker/nginx/nginx.conf)
-- Further rails config files can be found at https://github.com/eLearning-Plus/MemberHub/tree/main/config
+- https://github.com/eLearning-Plus/MemberHub/tree/main/config
