@@ -1,6 +1,6 @@
 ### Overview of the Docker Setup
 
-This project uses **docker-compose** to containerise the application and its dependencies for development.
+This project uses **docker-compose** to containerise the application and its dependencies for development. It provides an environment for developing and running the Rails application. It includes services for the Rails application, PostgreSQL database, Nginx web server, Redis cache, and Mailhog for email testing. Each service is configured with the necessary environment variables, volumes, and network settings for communication and data persistence.
 
 #### 1. [docker-compose.yml](https://github.com/eLearning-Plus/MemberHub/blob/main/docker-compose.yml)
 
@@ -22,9 +22,7 @@ The [Dockerfile for Nginx](https://github.com/eLearning-Plus/MemberHub/blob/ma
     
 *   **Build Context**: Current directory (.)
     
-*   **Volumes**: Mounts the current directory to [app](vscode-file://vscode-app/c:/Users/Mark/AppData/Local/Programs/Microsoft VS Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html) inside the container.
-    
-*   **Depends On**: [db](vscode-file://vscode-app/c:/Users/Mark/AppData/Local/Programs/Microsoft VS Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html) service.
+*   **Volumes**: Mounts the current directory to [app](https://github.com/eLearning-Plus/MemberHub/tree/main/app) inside the container.
     
 *   **Command**: Removes any existing server PID file, runs database migrations, and starts the Rails server.
     
@@ -52,7 +50,7 @@ The [Dockerfile for Nginx](https://github.com/eLearning-Plus/MemberHub/blob/ma
 
 *   **Container Name**: nginx
     
-*   **Build Context**: [nginx](vscode-file://vscode-app/c:/Users/Mark/AppData/Local/Programs/Microsoft VS Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html)
+*   **Build Context**: [nginx](https://github.com/eLearning-Plus/MemberHub/tree/main/docker/nginx)
     
 *   **Depends On**: rails service.
     
@@ -98,7 +96,3 @@ The [Dockerfile for Nginx](https://github.com/eLearning-Plus/MemberHub/blob/ma
 
 *   **db**: A Docker volume to persist PostgreSQL data.
     
-
-### Summary
-
-This Docker setup provides a robust environment for developing and running the Rails application. It includes services for the Rails application, PostgreSQL database, Nginx web server, Redis cache, and Mailhog for email testing. Each service is configured with the necessary environment variables, volumes, and network settings to ensure seamless communication and data persistence.
