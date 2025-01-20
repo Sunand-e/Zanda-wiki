@@ -13,8 +13,14 @@ The [Devise](https://github.com/heartcombo/devise) gem is used to handle user au
 - Invitations, registrations and confirmations
 - Integration with Doorkeeper for OAuth 2.0 authentication
 
-Devise config is found at: [config/initializers/devise.rb](https://github.com/eLearning-Plus/MemberHub/blob/main/config/initializers/devise.rb)
-Devise routes are in routes.rb
+Devise config is found at [config/initializers/devise.rb](https://github.com/eLearning-Plus/MemberHub/blob/main/config/initializers/devise.rb)
+
+Devise routes are in [config/routes.rb](https://github.com/eLearning-Plus/MemberHub/blob/main/config/routes.rb)
+
+Devise is implemented for the user model in [app/models/user.rb](https://github.com/eLearning-Plus/MemberHub/blob/main/app/models/user.rb)
+
+JWTs are used for authentication. **THESE ARE CURRENTLY STORED IN LOCALSTORAGE - this should be changed to secure HttpOnly cookies**. an implementation of this has been attempted, alongside Azure ActiveDirectory (EntraID) SSO, in the [sso branch](https://github.com/eLearning-Plus/MemberHub/tree/sso).
+
 
 ### New User flow
 
