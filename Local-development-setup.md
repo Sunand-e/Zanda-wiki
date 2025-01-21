@@ -45,7 +45,7 @@ See the docker-compose file for more info.
 
 - Create a `.env` file. Pay attention to the `FRONTEND_DIRECTORY` variable
 
-- The **RAILS_MASTER_KEY** is sensitive and is therefore not provided in this documentation. **IT IS CURRENTLY THE SAME RAILS_MASTER_KEY AS IS USED IN PRODUCTION - THIS SHOULD BE CHANGED!**
+- The **RAILS_MASTER_KEY** is sensitive and is therefore not provided in this documentation. 
 See: https://stackoverflow.com/questions/60702248/whats-the-correct-way-of-defining-secret-key-base-on-rails-6
 and https://blog.saeloun.com/2019/10/10/rails-6-adds-support-for-multi-environment-credentials
 
