@@ -45,6 +45,9 @@ See the docker-compose file for more info.
 
 - Create a `.env` file. Pay attention to the `FRONTEND_DIRECTORY` variable
 
+- The **RAILS_MASTER_KEY** is sensitive and is therefore not provided in this documentation. **IT IS CURRENTLY THE SAME RAILS_MASTER_KEY AS IS USED IN PRODUCTION - THIS SHOULD BE CHANGED!**
+See: https://blog.saeloun.com/2019/10/10/rails-6-adds-support-for-multi-environment-credentials and https://stackoverflow.com/questions/60702248/whats-the-correct-way-of-defining-secret-key-base-on-rails-6
+
 ```
 # HOST_NAME is used for tenant URLs. For example, if HOST_NAME is set to 'local', the tenant URL will be 'tenant-name.local'.
 # You will need a wildcard hosts file entry mapping *.local to 127.0.0.1 for this to work.
@@ -54,10 +57,11 @@ POSTGRES_USERNAME=pguser
 POSTGRES_PASSWORD=pgpass
 POSTGRES_DB=learning-platform-db
 POSTGRES_HOST=db
-# RAILS_MASTER_KEY - is this required? This is currently required, as the rails credentials.yml.enc file contains the 
-# jwt_secret_key. This should be moved to the .env file. It also contains the secret_key_base, which is no longer used.
-# Once jwt_secret_key is removed, we can stop using the RAILS_MASTER_KEY.
-RAILS_MASTER_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# RAILS_MASTER_KEY - is this required? YES, as the rails credentials.yml.enc file contains the 
+# jwt_secret_key and secret_key_base. These secrets could instead be moved to the .env file, or multi-environment credentials could be used?
+# See: https://stackoverflow.com/questions/60702248/whats-the-correct-way-of-defining-secret-key-base-on-rails-6
+# and: https://blog.saeloun.com/2019/10/10/rails-6-adds-support-for-multi-environment-credentials
+RAILS_MASTER_KEY=
 # The `FRONTEND_DIRECTORY` var is used to mount the static files into the nginx container. Nginx serves the files from its own filesystem.
 # Ensure this directory exists, and when exporting the frontend, ensure the files are placed in the path given in `FRONTEND_DIRECTORY`.
 # The above only applies to the local setup.
