@@ -1,18 +1,6 @@
 #### Overview
 
-This development setup leverages **Docker Compose** to orchestrate the application and its associated services. The backend is implemented with Rails, proxied by NGINX for request handling, while the frontend has two modes of operation: production (static export) and development.
-
-#### Backend Services
-
-1.  **Rails Application**:
-
-    -   Runs inside a Docker container.
-    -   Processes API requests forwarded by NGINX.
-2.  **NGINX**:
-
-    -   Listens on **port 80**.
-    -   Serves static frontend files from a local directory, mounted to the container as a volume.
-    -   Acts as a reverse proxy, forwarding requests to the Rails application container.
+This development setup leverages **Docker Compose** to orchestrate the application and its associated services. The backend is implemented with Rails, proxied by NGINX for request handling, while the frontend has two modes of operation: production (static export) and development. See: https://github.com/eLearning-Plus/MemberHub/wiki/Docker-container-setup for more details.
 
 #### Frontend
 
@@ -24,14 +12,6 @@ This development setup leverages **Docker Compose** to orchestrate the applicati
 
     -   Runs on **port 3001** using its own Express server.
     -   The Express server forwards API requests to the backend via NGINX.
-
-#### Volume Mounting
-
--   Local directories are mounted into containers as volumes to allow seamless development and testing. For instance:
-    -   The frontend's static assets are mounted from a specified local directory.
-    -   Logs and temporary files are managed using Docker volumes.
-
-See the docker-compose file for more info.
 
 ### Setting up a fully local deployment of the platform:
 
