@@ -121,4 +121,6 @@ You should now be able to access the frontend at 127.0.0.1:80
 
 - The frontend dev environment should be available at: `127.0.0.1:3001`
 
+### Logging in as Super Admin
+
 - The credentials for the 'Super Admin' user account are available in https://github.com/eLearning-Plus/MemberHub/blob/main/db/seeds.rb
