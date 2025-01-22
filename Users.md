@@ -9,11 +9,10 @@ Represents the users and manages their authentication, profile management, and i
 - As the `act_as_paranoid` gem is used on the User model, email addresses for deleted users are prefixed with `deleted_[random_string]_` to allow for users with the same email address as a deleted user to be re-added to the tenant.
 
 ### User roles
-**Roles and Permissions**:
 
-*   Pre-set roles are defined in a JSON file and stored in the database.    
-*   Global roles include Tenant Admin, Supervisor, and Learner.    
-*   Group-specific roles such as Group Leader and Member.    
-*   Content-level roles like Learner or Editor (customizable).    
-*   Role capabilities managed via a many-to-many relationship with the roles\_capabilities table.
+A user's role(s) determine what actions they can take at the global (tenant) level, at the group level, and at the content level. Ultimately, it is the role system that is responsible for determining if a user has access to a particular content item. Some pre-defined roles are defined in [lib/json_files/roles.json](https://github.com/eLearning-Plus/MemberHub/blob/main/lib/json_files/roles.json). For a more detailed explanation of the role system, see https://github.com/eLearning-Plus/MemberHub/wiki/Roles-and-Capabilities
+
+- **Tenant-wide** roles determine what capabilities a user has across the whole tenant. For example, a user can have a 'Tenant Admin' role, and that role has the `CreateCourse` capability.
+- **Group-specific** roles determine what capabilities are attached to a user within a particular group - for example, they may have a 'Group Leader' role, which has the `GetUsers` capability. This enables them to see all users who are in the group.
+- **Content-level** roles determine the capabilities a user has in relation to a particular content item (course, resource, etc) - these are used to create direct relationships between users and content items, and specify what the user can do with a particular content item.
 
