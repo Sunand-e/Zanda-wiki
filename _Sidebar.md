@@ -18,7 +18,7 @@
 - [Docker container setup and configurations](https://github.com/eLearning-Plus/MemberHub/wiki/Docker-container-setup)
 
 ### Database Details
-- [Schema and structure](https://github.com/eLearning-Plus/MemberHub/wiki/Database-schema-and-structure)
+- [Database schema](https://github.com/eLearning-Plus/MemberHub/wiki/Database-schema)
 - [Backup and restoration processes](https://github.com/eLearning-Plus/MemberHub/wiki/Database-backup-and-restoration-processes)
 
 ### [Third-Party Integrations](https://github.com/eLearning-Plus/MemberHub/wiki/Third%E2%80%90Party-Integrations)
