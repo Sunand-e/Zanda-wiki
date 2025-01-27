@@ -1,54 +1,34 @@
-One of the core concepts of the platform, the `ContentItem` model houses multiple types of content - courses, sections, lessons, quizzes, SCORM modules, resources and pathways are all instances of the ContentItem model. All content items are trackable, i.e. for each user, each ContentItem can hold a 'status', and optionally 'progress' and 'score'. The content itself is stored as a JSONB field, 'content', of the ContentItem model.
+One of the core concepts of the platform, the `ContentItem` model houses multiple types of content - courses, sections, lessons, quizzes, SCORM modules, resources and pathways are all instances of the ContentItem model. All content items are trackable, i.e. for each user, each ContentItem can hold a 'status', and optionally 'progress' and 'score'. The content item's type is stored in the `item_type` field, and the content itself is stored in the `content` field (JSONB) of the ContentItem model.
 
 This documentation outlines the structure and relationships of ContentItems within the platform.
 
 'Assignable' ContentItem Types
 -----------------
-There are currently three 'assignable' content types - meaning they can be directly assigned to users, or they can be assigned or provided to groups. They are They can also be shared between tenants.
+There are currently three 'assignable' content types - meaning they can be directly assigned to users, or they can be assigned or provided to groups. They can also be shared between tenants. These types are:
 
 ### Courses
 
 These are the core entities at the heart of the platform. Progress for a course is based on the progress values of its children.
-    
-**Children**:
-- **Sections**: Subdivisions of a course. Each section contains one of three types of content, often referred to as "modules" conceptually (though no "Module" class or interface exists in the codebase):
-
-    - **Lesson**: Multimedia educational content, built using a frontend block-based course builder.
-            
-    - **SCORM Module**: Standardized e-learning package.
-            
-    - **Quiz**: Assessments to evaluate user knowledge.
 
 ### Resources
 
 *   **Description**: Supplementary learning materials that may stand alone or complement courses.
-    
-        
 
-### 3\. Pathways
+### Pathways
 
 *   **Description**: An ordered collection of courses and/or resources.
-    
-*   **Children**:
-    
-    *   **Courses**: Integral learning modules.
-        
-    *   **Resources**: Supporting materials.
-        
        
-
-Relationships
+Content Item Relationships
 -------------
 
-### ContentItemRelationship
+The ContentItemRelationship model defines hierarchical relationships between ContentItems, and allows for ordering of content items within their parent.
 
-Defines hierarchical relationships between ContentItems:
+See [Content Item Relationships](https://github.com/eLearning-Plus/MemberHub/wiki/Content-Item-Relationships) for more details.
 
-*   **Parent-Child Relationship**: Supports nesting of ContentItems (e.g., Pathway -> Course -> Section -> Lesson).
-    
-
-User Interaction
+User-Content Relationships
 ----------------
+
+There are two tables that join users to content items: `UserContentItemRoles` and `UserContents`.
 
 ### UserContentItemRoles
 
@@ -63,7 +43,7 @@ User Interaction
 
 ### UserContents
 
-*   **Purpose**: Tracks user-specific data for assigned ContentItems.
+*   **Purpose**: Tracks user-specific data for assigned ContentItems and their children.
        
 
 Tracking and Progress
