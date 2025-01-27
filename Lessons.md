@@ -1,1 +1,1 @@
-Lessons
+Lessons are created using the frontend's block builder. They are not scored, and progress can currently be either 0 or 100.
