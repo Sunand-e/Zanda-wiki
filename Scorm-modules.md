@@ -6,6 +6,6 @@ The SCORM functionality of the platform uses three main concepts:
 
 **Note:** There is an additional model which is currently unused, `ScormSco`. This was generated due to the fact that SCORM packages can sometimes contain more than one 'SCO'. For more information on this, see: [https://scorm.com/scorm-explained/technical-scorm/run-time/](https://scorm.com/scorm-explained/technical-scorm/run-time/)
 
-#### How it works
+### How it works
 
 The platform supports both Articulate Rise and Storyline SCORM packages. The zip files are uploaded via the `upload_scorm` method of the `UploadsController`, and saved in the `ScormPackage` model. SCORM attempts are saved in the `ScoAttempt` model. Each time the SCORM package changes the CMI data on the frontend (when the user is interacting with the SCORM package), the whole CMI object is posted to the rails app via the `upsertScoAttempt` graphql mutation, and the existing saved data is overwritten with this for the user's current attempt. When a user loads a SCORM module, the system will use graphQL to retrieve the latest ScoAttempt data for the user, if one exists.
