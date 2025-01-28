@@ -2,8 +2,8 @@ One of the core concepts of the platform, the `ContentItem` model houses multipl
 
 This documentation outlines the structure and relationships of ContentItems within the platform.
 
-'Assignable' ContentItem Types
------------------
+## 'Assignable' ContentItem Types
+
 There are currently three 'assignable' content types - meaning they can be directly assigned to users, or they can be assigned or provided to groups. They can also be shared between tenants. These types are:
 
 ### Courses
@@ -12,54 +12,41 @@ These are the core entities at the heart of the platform. Progress for a course 
 
 ### Resources
 
-*   **Description**: Supplementary learning materials that may stand alone or complement courses.
+Supplementary learning materials that may stand alone or complement courses.
 
 ### Pathways
 
-*   **Description**: An ordered collection of courses and/or resources.
-       
-Content Item Relationships
--------------
+An ordered collection of courses and/or resources.
+
+## Content Item Relationships
 
 The ContentItemRelationship model defines hierarchical relationships between ContentItems, and allows for ordering of content items within their parent.
 
 See [Content Item Relationships](https://github.com/eLearning-Plus/MemberHub/wiki/Content-Item-Relationships) for more details.
 
-User-Content Relationships
-----------------
+## User-Content Relationships
 
 There are two tables that join users to content items: `UserContentItemRoles` and `UserContents`.
 
 ### UserContentItemRoles
 
-*   **Purpose**: Manages assignments of ContentItems to individual users or groups.
-    
+*   **Purpose**: Manages assignments of 'assignable' ContentItems to individual users or groups.
 *   **Roles**:
-    
     *   Assigning ContentItems (Courses, Resources, or Pathways).
-        
     *   Monitoring permissions for access and participation.
-        
 
 ### UserContents
 
-*   **Purpose**: Tracks user-specific data for assigned ContentItems and their children.
-       
+**Purpose**: Tracks user-specific data, e.g. progress, score, and status, for assigned ContentItems and their children.
 
-Tracking and Progress
----------------------
+*   **Progress** - integer from 0 to 100. For courses and pathways, progress is calculated using
+*   **Score** - integer from 0 to 100
+*   **Completion** - String, one of 'not_started', 'in_progress' or 'completed'. A null value is equivalent to 'not_started'.
 
-*   **Assignable ContentItems**: All parent ContentItems (Courses, Resources, Pathways) and their components (Sections and module types) are monitored for:
-    
-    *   **Progress**: How far a user has gone through the content.
-        
-    *   **Scores**: Achievements in assessments like Quizzes.
-        
+When any of the above are updated for a content item, all of it's ancestors are updated too (i.e. a lesson will update its parent section, which will update the parent course. You can see how these are calculated in the `update_ancestor_progress_and_statuses` method of the `UserContent` model.
 
 ### Example Use Cases
 
-1.  **Course Assignment**: A Course is assigned to a user. Their progress in sections, lessons, SCORM content, and quizzes is tracked via **UserContents**.
-    
-2.  **Pathway for Group**: A Pathway containing multiple Courses and Resources is assigned to a group, meaning all users in the group have access to the pathway, and all of its children.
-    
-3.  **Resource Sharing**: A standalone Resource is assigned to an individual for supplementary learning.
+1.  **Course Assignment**: A Course can be assigned to a user. Their progress in sections, lessons, SCORM content, and quizzes is tracked via **UserContents**.
+2.  **Pathway for Group**: A Pathway containing multiple Courses and Resources can be assigned to a group, meaning all users in the group have access to the pathway, and all of its children.
+3.  **Resource Sharing**: A standalone Resource can be assigned to an individual for supplementary learning.
