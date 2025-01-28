@@ -26,20 +26,17 @@ See [Content Item Relationships](https://github.com/eLearning-Plus/MemberHub/wik
 
 ## User-Content Relationships
 
-There are two tables that join users to content items: `UserContentItemRoles` and `UserContents`.
+There are two models that join users to content items: `UserContentItemRoles` and `UserContents`.
 
 ### UserContentItemRoles
 
-*   **Purpose**: Manages assignments of 'assignable' ContentItems to individual users or groups.
-*   **Roles**:
-    *   Assigning ContentItems (Courses, Resources, or Pathways).
-    *   Monitoring permissions for access and participation.
+`UserContentItemRoles` manages assignments of 'assignable' ContentItems (courses, resources, pathways) to individual users. The role attached to the record determines what actions the user can take for the particular content item.
 
 ### UserContents
 
-**Purpose**: Tracks user-specific data, e.g. progress, score, and status, for assigned ContentItems and their children.
+Tracks user-specific data, e.g. progress, score, and status, for assigned ContentItems and their children.
 
-*   **Progress** - integer from 0 to 100. For courses and pathways, progress is calculated using
+*   **Progress** - integer from 0 to 100.
 *   **Score** - integer from 0 to 100
 *   **Completion** - String, one of 'not_started', 'in_progress' or 'completed'. A null value is equivalent to 'not_started'.
 
