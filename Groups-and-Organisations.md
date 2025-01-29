@@ -2,7 +2,7 @@ Groups and Organisations
 
 ### Multi-Tenant Structure: Groups and Organisations
 
-In the platform, **clients** either use **groups** or **organisations**, depending on whether they are resellers or not. The key difference lies in how these groups or organisations manage users and enrolments. A tenant can have multiple groups or organisations within it. They could even have both, but extra attention must be given to the UI for this to be a solid offering.
+In the platform, **tenants** either use **groups** or **organisations**, depending on whether they are resellers or not. The key difference lies in how these groups or organisations manage users and enrolments. A tenant can have multiple groups or organisations within it. They could even have both, but extra attention must be given to the UI for this to be a solid offering.
 
 *   **Tenant**: The primary unit in your multi-tenant system. Each tenant represents a separate business or entity. A tenant can have multiple **groups** or **organisations** within it.
 *   **Group** (Non-Reseller Clients):
