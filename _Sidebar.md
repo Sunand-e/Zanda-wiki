@@ -46,4 +46,4 @@
 	- [User Roles](https://github.com/eLearning-Plus/MemberHub/wiki/Global-user-roles)
 	- [User ContentItem Roles](https://github.com/eLearning-Plus/MemberHub/wiki/User-ContentItem-Roles)
 	- [User Group Roles](https://github.com/eLearning-Plus/MemberHub/wiki/User-Group-Roles)
-
+    - [Frontend](https://github.com/eLearning-Plus/MemberHub/wiki/Frontend)
