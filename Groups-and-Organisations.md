@@ -4,7 +4,6 @@ Groups and Organisations
 
 In the platform, **tenants** either use **groups** or **organisations**, depending on whether they are resellers or not. The key difference lies in how these groups or organisations manage users and enrolments. A tenant can have multiple groups or organisations within it. They could even have both, but extra attention must be given to the UI for this to be a solid offering.
 
-*   **Tenant**: The primary unit in your multi-tenant system. Each tenant represents a separate business or entity. A tenant can have multiple **groups** or **organisations** within it.
 *   **Group** (Non-Reseller Clients):
     *   **Purpose**: Groups are used for non-reseller clients who simply need to assign courses to users without managing enrolment limits or credits.
     *   **No Enrolment Limits**: There are no restrictions on how many users can be added to a group, and no tracking of enrolment credits.
