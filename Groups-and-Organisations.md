@@ -1,42 +1,187 @@
-Groups and Organisations
+LMS Group & Organisation Management Documentation
+-------------------------------------------------
 
-### Multi-Tenant Structure: Groups and Organisations
+### 1\. Overview
 
-In the platform, **tenants** either use **groups** or **organisations**, depending on whether they are resellers or not. The key difference lies in how these groups or organisations manage users and enrolments. A tenant can have multiple groups or organisations within it. They could even have both, but extra attention must be given to the UI for this to be a solid offering.
+This document details the functionalities related to Groups and Organisations within the LMS, including credits-based user management, permissions, and content assignment. It covers:
 
-*   **Group** (Non-Reseller Clients):
-    *   **Purpose**: Groups are used for non-reseller clients who simply need to assign courses to users without managing enrolment limits or credits.
-    *   **No Enrolment Limits**: There are no restrictions on how many users can be added to a group, and no tracking of enrolment credits.
-*   **Organisation** (Resellers):
-    *   **Purpose**: Organisations are a special type of group designed for resellers. They come with the ability to manage **enrolment licences**, which restrict how many users can be enrolled based on available credits.
-    *   **Enrolment Management**: Organisations are provided with a set of enrolment licenses. Each license corresponds to one user being able to enrol in a course, and these licences are consumed as users are added and assigned courses.
+-   Group-based course provisioning and enrolments
 
-### Tenant Admin Role in Managing Groups and Organisations
+-   Credits system for organisations
 
-The **tenant admin** plays a central role in managing both groups and organisations within the tenant:
+-   Roles and permissions for Group Leaders, Organisation Leaders, and Tenant Admins
 
-1.  **Managing Groups and Organisations**:
-    *   The tenant admin can create either standard **groups** (for non-reseller clients) or **organisations** (for resellers).
-    *   For organisations, the admin has the ability to set and adjust the number of enrolment licences available (the total number of users that can be enrolled in courses under that organisation).
-2.  **Enrolment License Management**:
-    *   Tenant admins have oversight over how many enrolment licences an organisation has and can increase this number as necessary.
-    *   They can monitor enrolment usage across both groups and organisations, ensuring that no organisation exceeds its licence quota.
+-   Capabilities related to content assignment (EnrolUsersInContent)
 
-### Key Functional Differences
+-   Credit distribution and tracking for training resellers
 
-*   **Groups**:
-    *   Groups do not have an enrolment limit and are typically used by non-reseller clients. They can assign as many users to courses as needed without concern for enrolment credits.
-*   **Organisations**:
-    *   Organisations are designed for resellers and come with additional functionality around **enrolment credits**. Each enrolment license corresponds to a user that can be enrolled in any course, and organisations are restricted by the number of credits available to them.
-    *   The system ensures that users can only be added to organisations up to the limit of available credits. Once the enrolment credits are exhausted, no more users can be added unless additional credits are granted.
+### 2\. Groups & Organisations
 
-### Conditional Workflow
+#### 2.1. Groups
 
-*   **Standard Group**: Users can be added and courses can be assigned freely without restrictions on enrolment licences.
-*   **Organisation**: The system checks available enrolment credits before allowing a new user to be added to the organisation. If there are no credits left, no additional users can be added or enrolled in courses.
+A group represents a business client that has:
 
-This setup ensures that resellers can manage their users and enrolments within the limits of their credits, while non-reseller clients have the flexibility to assign courses to any number of users within their group.
+-   A set of courses assigned via `GroupContent` or `GroupProvisionedCourses`.
 
-### Summary
+-   One or more Group Leaders responsible for user enrolments and reports.
 
-In your platform, **groups** are for regular clients who don’t need enrolment limits, and **organisations** are for resellers who need to manage enrolment licences. The tenant admin is responsible for overseeing both types of groups, managing enrolment credits for organisations, and ensuring the system functions within the boundaries of those credits. This structure offers flexibility for both types of clients, supporting the needs of resellers while simplifying user management for standard clients.
+#### 2.2. Organisations (Special Type of Group)
+
+Organisations are structured as groups but with additional constraints:
+
+-   Organisations exclusively use the **credits system** for course enrolments.
+
+-   Organisation Leaders can only manage one organisation.
+
+-   Any user created by an Organisation Leader is automatically assigned to the same organisation.
+
+-   Organisation Leaders can:
+
+    -   Upload new users (restricted to their own organisation).
+
+    -   Assign only `GroupProvisionedCourses` to users.
+
+    -   View reports for their organisation.
+
+    -   Edit user details and remove users (with constraints, but **cannot remove Group Leaders**).
+
+    -   Users removed from an organisation cannot be part of another group.
+
+    -   See an indicator of 'remaining credits' when assigning users to courses.
+
+### 3\. Credits System for Organisations
+
+#### 3.1. Overview of the Credits System
+
+Organisations use a credits-based system for course enrolment. Each organisation is allocated a number of credits, which determine the number of courses users can be enrolled in.
+
+-   **One credit = One course assigned to one user.**
+
+-   If all credits are used, new course assignments are blocked.
+
+-   Organisation Leaders cannot assign more courses than available credits.
+
+-   Tenant Admins can increase the credit count.
+
+-   Training resellers can distribute credits to organisations and track how many they have distributed.
+
+#### 3.2. Credit System Scenarios
+
+**Example Scenario:**
+
+-   A Tenant Admin creates an organisation and allocates 10 credits.
+
+-   The organisation is provided with access to 20 courses.
+
+-   The Organisation Leader attempts to assign 20 courses to a single user (this should fail because only 10 credits are available).
+
+-   The Organisation Leader attempts to assign 10 courses to three users (this should fail because 30 credits would be required, but only 10 are available).
+
+#### 3.3. Credit Attributes
+
+| Attribute | Description |
+| `credits_total` | Total number of credits allocated to the organisation. |
+| `credits_used` | Number of credits currently consumed. |
+|  |  |
+
+#### 3.4. Credit Transactions & Reporting
+
+-   Each transaction of credits (credits given to an organisation) is logged with a date and number of credits.
+
+-   **Transaction Table Columns:**
+
+    -   `tenantId`
+
+    -   `groupId`
+
+    -   `creditCount`
+
+-   The total number of credits distributed to a tenant's organisations can be retrieved by selecting from the transaction table grouped by `tenant_id`.
+
+-   Resellers need visibility into `elp credits used` / `elp credit total` for each organisation.
+
+-   Reports on credit usage per content item can be retrieved from `TenantContentItem.credits_used`.
+
+#### 3.5. Credit Enforcement
+
+-   If an Organisation Leader tries to assign a course and no credits are available, the action is blocked.
+
+-   Bulk enrolments (`EnrolUsersInContent`) are blocked if they exceed available credits.
+
+-   Tenant Admins can increase the `credits_total` to allow more course assignments.
+
+-   Restrict credit functionality to just courses in `EnrolUsersInContent` mutation.
+
+### 4\. Roles & Permissions
+
+#### 4.1. Group Leader
+
+A Group Leader manages users and enrolments within a group. They can:
+
+-   Assign courses from `GroupContent` to users.
+
+-   Create new users in their group.
+
+-   View reports on user progress.
+
+##### 4.1.1. Restrictions
+
+-   A Group Leader does not use the credits system.
+
+-   They can only assign users the `Member` role.
+
+-   If an enrolment action exceeds available licenses, it is blocked.
+
+#### 4.2. Organisation Leader
+
+An Organisation Leader has similar responsibilities to a Group Leader but with additional constraints:
+
+-   They can **only upload new users to their own organisation**.
+
+-   They can **only assign GroupProvisionedCourses**.
+
+-   They can **see reports related to their organisation**.
+
+-   They can **only delete users they initially created**, provided those users are not in another group.
+
+-   **They cannot remove Group Leaders.**
+
+-   **They have visibility into the remaining credits before assigning courses.**
+
+#### 4.3. Tenant Admin
+
+A Tenant Admin oversees multiple organisations and manages credits. They can:
+
+-   View the current credit count and total credits for each organisation.
+
+-   Increase an organisation's total credits (`credits_increment`).
+
+-   Designate a group as an organisation (`is_organisation` flag).
+
+-   Ensure that Organisation Leaders only assign the `Member` role to users.
+
+-   Track credit distribution to organisations.
+
+### 5\. System Constraints & Checks
+
+| Check | Condition | Action |
+| Course Assignment Limit | If total assigned courses exceed available credits | Block assignment. |
+| Bulk Enrolments | If bulk action exceeds available credits | Block entire action. |
+| User Deletion | If user belongs to multiple groups | Block deletion. |
+| User Role Assignment | Group Leaders can only assign the `Member` role | Enforce restriction. |
+| Organisation Leader Removal | Attempt to remove a Group Leader | Block action. |
+| Credit Distribution Reporting | Total credits distributed per tenant | Log and report data. |
+
+### 6\. Key Takeaways
+
+-   Only **organisations** use the **credits system** to control course assignments.
+
+-   **One credit = One course per user.**
+
+-   Tenant Admins allocate credits; Organisation Leaders assign courses within credit limits.
+
+-   **Organisation Leaders cannot remove Group Leaders.**
+
+-   Course assignment actions fail if they exceed available credits.
+
+-   **Credit distribution and tracking are logged for resellers.**
