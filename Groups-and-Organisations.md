@@ -1,6 +1,3 @@
-LMS Group & Organisation Management Documentation
--------------------------------------------------
-
 ### 1\. Overview
 
 This document details the functionalities related to Groups and Organisations within the LMS, including credits-based user management, permissions, and content assignment. It covers:
@@ -9,7 +6,7 @@ This document details the functionalities related to Groups and Organisations wi
 
 -   Credits system for organisations
 
--   Roles and permissions for Group Leaders, Organisation Leaders, and Tenant Admins
+-   Roles and permissions for Group Leaders and Tenant Admins
 
 -   Capabilities related to content assignment (EnrolUsersInContent)
 
@@ -21,27 +18,27 @@ This document details the functionalities related to Groups and Organisations wi
 
 A group represents a business client that has:
 
--   A set of courses assigned via `GroupContent` or `GroupProvisionedCourses`.
+-   **Assigned Content**: All members of the group (or users with any other role in GroupMemberships model) gain access to the content.
 
--   One or more Group Leaders responsible for user enrolments and reports.
+-   **Provisioned Content:** The Group Leader can directly assign any group provisioned content to any members within the group.
+
+-   **Group Leaders** can report on their group courses and users
+
+-   Any user created by a Group Leader is automatically assigned to the same group.
 
 #### 2.2. Organisations (Special Type of Group)
 
-Organisations are structured as groups but with additional constraints:
+Organisations are structured as groups but with additional features:
+
+-   boolean property `isOrganisation` of the group is set to `true` 
 
 -   Organisations exclusively use the **credits system** for course enrolments.
 
--   Organisation Leaders can only manage one organisation.
-
--   Any user created by an Organisation Leader is automatically assigned to the same organisation.
+-   A user with a **Group Leader** role in an organisation is referred to as an '**Organisation Leader**'.
 
 -   Organisation Leaders can:
 
     -   Upload new users (restricted to their own organisation).
-
-    -   Assign only `GroupProvisionedCourses` to users.
-
-    -   View reports for their organisation.
 
     -   Edit user details and remove users (with constraints, but **cannot remove Group Leaders**).
 
@@ -122,35 +119,15 @@ A Group Leader manages users and enrolments within a group. They can:
 
 -   Create new users in their group.
 
--   View reports on user progress.
+-   View reports on user progress
 
-##### 4.1.1. Restrictions
+-   They can only upload new users to their own group (they will be added as group 'members').
 
--   A Group Leader does not use the credits system.
+**4.2. Tenant Admin**
 
--   They can only assign users the `Member` role.
+A Tenant Admin oversees multiple groups / organisations and manages credits for organisations. They can:
 
--   If an enrolment action exceeds available licenses, it is blocked.
-
-#### 4.2. Organisation Leader
-
-An Organisation Leader has similar responsibilities to a Group Leader but with additional constraints:
-
--   They can **only upload new users to their own organisation**.
-
--   They can **only assign GroupProvisionedCourses**.
-
--   They can **see reports related to their organisation**.
-
--   They can **only delete users they initially created**, provided those users are not in another group.
-
--   **They cannot remove Group Leaders.**
-
--   **They have visibility into the remaining credits before assigning courses.**
-
-#### 4.3. Tenant Admin
-
-A Tenant Admin oversees multiple organisations and manages credits. They can:
+-   Add users to a group as eithe r a member or a group leader
 
 -   View the current credit count and total credits for each organisation.
 
@@ -164,24 +141,12 @@ A Tenant Admin oversees multiple organisations and manages credits. They can:
 
 ### 5\. System Constraints & Checks
 
+These should be checked as a Group Leader / Org Leader so we can be sure Groups are working as expected:
+
 | Check | Condition | Action |
-| Course Assignment Limit | If total assigned courses exceed available credits | Block assignment. |
-| Bulk Enrolments | If bulk action exceeds available credits | Block entire action. |
+| Course Assignment Limit | If total assigned courses exceed available credits for organisation | Block assignment. |
+| Bulk Assignments | If bulk action exceeds available credits | Block entire action. |
 | User Deletion | If user belongs to multiple groups | Block deletion. |
-| User Role Assignment | Group Leaders can only assign the `Member` role | Enforce restriction. |
+| User Creation | User should be added as member to the Group Leader's group | Create additional GroupMembership entry. |
 | Organisation Leader Removal | Attempt to remove a Group Leader | Block action. |
-| Credit Distribution Reporting | Total credits distributed per tenant | Log and report data. |
-
-### 6\. Key Takeaways
-
--   Only **organisations** use the **credits system** to control course assignments.
-
--   **One credit = One course per user.**
-
--   Tenant Admins allocate credits; Organisation Leaders assign courses within credit limits.
-
--   **Organisation Leaders cannot remove Group Leaders.**
-
--   Course assignment actions fail if they exceed available credits.
-
--   **Credit distribution and tracking are logged for resellers.**
+|  |
