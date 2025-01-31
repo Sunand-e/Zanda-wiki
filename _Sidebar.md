@@ -40,8 +40,7 @@
 				- [Questions](https://github.com/eLearning-Plus/MemberHub/wiki/Questions)
 	- [Resources](https://github.com/eLearning-Plus/MemberHub/wiki/Resources)
 	
-- [Groups](Groups)
-	- [Organisations](https://github.com/eLearning-Plus/MemberHub/wiki/Organisations)
+- [Groups & Organisations](https://github.com/eLearning-Plus/MemberHub/wiki/Groups-and-Organisations)
 - [Roles and Capabilities](https://github.com/eLearning-Plus/MemberHub/wiki/Roles-and-Capabilities)
 	- [User Roles](https://github.com/eLearning-Plus/MemberHub/wiki/Global-user-roles)
 	- [User ContentItem Roles](https://github.com/eLearning-Plus/MemberHub/wiki/User-ContentItem-Roles)
