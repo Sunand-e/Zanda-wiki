@@ -4,18 +4,6 @@ It is wrapped in a context provider, as each table has it's own store. We use Zu
 
 The Zustand store is defined in [/components/common/tables/tableContext](https://github.com/eLearning-Plus/learning-platform-frontend/blob/main/components/common/tables/tableContext.tsx) and exports the `useTableContext` hook. The file and hook should probably be renamed to `useTableStore` and moved to the hooks folder for consistency with other zustand stores in the codebase.
 
-We export the TableWithProvider component from this file as the default export (so we can import it with whatever name we like, but usually this is 'Table'), and we export the table without the provider as `TableWithoutProvider` for certain use cases where we need the table provider to be higher in the component tree, for eample in `BoxContainerTable` component (Where the BoxContainer component also needs access to the table store).
-
-Table (with provider - the provider contains a zustand store context, which is passed the values via `tableProps` property):
-
-tableProps = {
-isReorderable: true,
-tableData: [array of items to show in table]
-tableCols
-}
-
-<Wrapper >
-    <Table which has access to the zustand store context>
-</Wrapper>
+We export the TableWithProvider component from `Table` component file as the default export (so we can import it with whatever name we like, but usually this is 'Table'), and we export the table without the provider as `TableWithoutProvider` for certain use cases where we need the table provider to be higher in the component tree, for eample in `BoxContainerTable` component (Where the BoxContainer component also needs access to the table store).
 
 We use createStore within the `createTableStore` function to initialise the Zustand store for each table.
