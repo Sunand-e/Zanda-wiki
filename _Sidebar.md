@@ -41,8 +41,4 @@
 	- [Resources](https://github.com/eLearning-Plus/MemberHub/wiki/Resources)
 	
 - [Groups & Organisations](https://github.com/eLearning-Plus/MemberHub/wiki/Groups-and-Organisations)
-- [Roles and Capabilities](https://github.com/eLearning-Plus/MemberHub/wiki/Roles-and-Capabilities)
-	- [User Roles](https://github.com/eLearning-Plus/MemberHub/wiki/Global-user-roles)
-	- [User ContentItem Roles](https://github.com/eLearning-Plus/MemberHub/wiki/User-ContentItem-Roles)
-	- [User Group Roles](https://github.com/eLearning-Plus/MemberHub/wiki/User-Group-Roles)
-    - [Frontend](https://github.com/eLearning-Plus/MemberHub/wiki/Frontend)
+- [Frontend](https://github.com/eLearning-Plus/MemberHub/wiki/Frontend)
