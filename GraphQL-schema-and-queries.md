@@ -13,3 +13,5 @@ The GraphQL schema can be explored with the GraphQL explorer, which is made avai
 Where possible, we attempt to follow the [Relay connections specification](https://relay.dev/graphql/connections.htm), allowing for cursor-based pagination, and in some cases, adding extra data to the edges between two types (e.g. `UserContentEdgeType` defines the data available on the 'edge' between `User`s and `ContentItem`s).
 
 For more info on connections / edges: https://graphql-ruby.org/pagination/using_connections
+
+https://stackoverflow.com/questions/55744926/offset-pagination-vs-cursor-pagination
