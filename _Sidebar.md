@@ -41,4 +41,5 @@
 	- [Resources](https://github.com/eLearning-Plus/MemberHub/wiki/Resources)
 	
 - [Groups & Organisations](https://github.com/eLearning-Plus/MemberHub/wiki/Groups-and-Organisations)
-- [Frontend](https://github.com/eLearning-Plus/MemberHub/wiki/Frontend)
+
+- [Frontend notes](https://github.com/eLearning-Plus/MemberHub/wiki/Frontend)
