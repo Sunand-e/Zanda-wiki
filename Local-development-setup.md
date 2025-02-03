@@ -100,7 +100,7 @@ mkdir -p ../learning-platform-frontend-export
 
 - Install dependencies:
 
-`npm run install --legacy-peer-deps`
+`npm install --legacy-peer-deps`
 (this works on node v18.12.0, npm v8.19.2, but *should* work on later versions too)
 
 - Build the frontend. This will export the frontend's static files to `/out`:
