@@ -26,6 +26,7 @@
 ### Existing Processes
 - [Deployment and release process](https://github.com/eLearning-Plus/MemberHub/wiki/Deployment-and-release-process)
 - [CI/CD pipelines and Testing](https://github.com/eLearning-Plus/MemberHub/wiki/CI-CD-pipelines-and-Testing)
+- [Debugging on Staging](https://github.com/eLearning-Plus/MemberHub/wiki/Debugging:-Connect-to-Rails-Console-on-Staging-Production)
 
 ### [Entities](https://github.com/eLearning-Plus/MemberHub/wiki/Entities)
 - [Tenants](https://github.com/eLearning-Plus/MemberHub/wiki/Tenants)
