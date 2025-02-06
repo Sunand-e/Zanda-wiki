@@ -1,5 +1,3 @@
-# Debugging: Connect to Rails Console on Staging/Production
-
 Use the following command to connect to the Rails console in the **staging** environment:
 
 ```bash
