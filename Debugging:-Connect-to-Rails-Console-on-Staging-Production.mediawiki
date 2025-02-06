@@ -1,6 +1,6 @@
 ### Use the following command to connect to the Rails console in the staging environment:
 
-c`luster="learning-platform-staging"`
+`cluster="learning-platform-staging"`
 `service="learning-platform-staging-api-service"`
 `container="learning-platform-staging-api"`
 `task_id=$(`
