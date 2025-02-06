@@ -1,6 +1,6 @@
-Use the following command to connect to the Rails console in the staging environment:
+### Use the following command to connect to the Rails console in the staging environment:
 
-cluster="learning-platform-staging"
+`cluster="learning-platform-staging"
 service="learning-platform-staging-api-service"
 container="learning-platform-staging-api"
 task_id=$(
@@ -15,7 +15,7 @@ aws ecs execute-command \
   --task $task_id \
   --container $container \
   --interactive \
-  --command "/bin/bash"
+  --command "/bin/bash"`
 
 Explanation
 
