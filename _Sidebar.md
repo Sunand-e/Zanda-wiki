@@ -23,9 +23,9 @@
 
 ### [Third-Party Integrations](https://github.com/eLearning-Plus/MemberHub/wiki/Third%E2%80%90Party-Integrations)
 
-### Existing Processes
+### Deployment Processes
 - [Deployment and release process](https://github.com/eLearning-Plus/MemberHub/wiki/Deployment-and-release-process)
-     - [Update Front-end Version](https://github.com/eLearning-Plus/MemberHub/wiki/Update-Version-using-GraphiQL)
+- [Update Front-end Version](https://github.com/eLearning-Plus/MemberHub/wiki/Update-Version-using-GraphiQL)
 - [CI/CD pipelines and Testing](https://github.com/eLearning-Plus/MemberHub/wiki/CI-CD-pipelines-and-Testing)
 - [Debugging on Staging](https://github.com/eLearning-Plus/MemberHub/wiki/Debugging:-Connect-to-Rails-Console-on-Staging-Production)
 
