@@ -41,12 +41,9 @@ Welcome to the Zanda360 Learning Platform documentation.
 - [**Content Items:**](https://github.com/eLearning-Plus/MemberHub/wiki/Content-Items)
   - [Courses](https://github.com/eLearning-Plus/MemberHub/wiki/Courses)  
     - [Sections](https://github.com/eLearning-Plus/MemberHub/wiki/Sections)  
-    - [Modules](https://github.com/eLearning-Plus/MemberHub/wiki/Course-modules)  
+    - Modules
       - [Lessons](https://github.com/eLearning-Plus/MemberHub/wiki/Lessons)  
-      - [SCORM Modules](https://github.com/eLearning-Plus/MemberHub/wiki/Scorm-modules)  
-      - [Quizzes](https://github.com/eLearning-Plus/MemberHub/wiki/Quizzes)  
-        - [Questions](https://github.com/eLearning-Plus/MemberHub/wiki/Questions)  
-  - [Resources](https://github.com/eLearning-Plus/MemberHub/wiki/Resources)  
+      - [SCORM Modules](https://github.com/eLearning-Plus/MemberHub/wiki/Scorm-modules)
 - [Groups & Organizations](https://github.com/eLearning-Plus/MemberHub/wiki/Groups-and-Organisations)
 
 ---
