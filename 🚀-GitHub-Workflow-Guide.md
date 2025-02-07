@@ -10,6 +10,23 @@ This document outlines the workflow for development, code review, testing, and d
 
 ---
 
+## 📊 GitHub Project Board Workflow  
+
+### Columns & Status Explanation  
+
+- **🆕 New**: New issues/tasks are added here.  
+- **📋 To Do**:  
+  - Tasks that need changes after comments.  
+  - Reopened issues or tasks that failed in testing.  
+- **🚧 In Progress**: Tasks currently being worked on by the developer.  
+- **👀 In Review**: PR has been raised for review.  
+- **🛠️ Ready for Testing**: After merging the feature branch to `staging`, tasks are moved here for testing.  
+- **🔍 In Testing**: The testing team verifies the feature in the staging environment.  
+- **✅ Ready for Production**: Tasks that are tested and approved for production deployment.  
+- **🏁 Done**: Tasks successfully deployed to production and marked as complete.  
+
+---
+
 ## 🛠️ Workflow Steps  
 
 ### 1️⃣ Creating a New Feature Branch  
@@ -41,33 +58,4 @@ This document outlines the workflow for development, code review, testing, and d
 - This deploys the code to production.  
 - Move the corresponding GitHub Project issue to **Done**.  
 
----
 
-## 📊 GitHub Project Board Workflow  
-
-### Columns & Status Explanation  
-
-- **🆕 New**: New issues/tasks are added here.  
-- **📋 To Do**:  
-  - Tasks that need changes after comments.  
-  - Reopened issues or tasks that failed in testing.  
-- **🚧 In Progress**: Tasks currently being worked on by the developer.  
-- **👀 In Review**: PR has been raised for review.  
-- **🛠️ Ready for Testing**: After merging the feature branch to `staging`, tasks are moved here for testing.  
-- **🔍 In Testing**: The testing team verifies the feature in the staging environment.  
-- **✅ Ready for Production**: Tasks that are tested and approved for production deployment.  
-- **🏁 Done**: Tasks successfully deployed to production and marked as complete.  
-
----
-
-## 📑 Summary of Key Steps  
-
-1. **Create a feature branch** from `main`.  
-2. **Develop and commit code** on the feature branch.  
-3. **Raise a Pull Request** to `main`.  
-4. **Code Review** and incorporate feedback.  
-5. **Merge to `staging`** for testing.  
-6. **Test in the staging environment**.  
-7. **Merge to `main`** after successful testing.  
-8. **Production Deployment** by merging `main` to `production` (backend) and deploying on `frontend`.  
-9. **Mark the issue as Done** in the GitHub Project.  
