@@ -15,6 +15,7 @@ The GitHub Actions workflow is triggered on push and pull\_request events to
 3.  **Login to Amazon ECR**:
     
     *   The aws-actions/amazon-ecr-login@v1 action logs in to Amazon ECR, allowing the workflow to push Docker images to the registry.
+     [View for more details](https://aws.amazon.com/blogs/security/use-iam-roles-to-connect-github-actions-to-actions-in-aws)
         
 4.  **Build, Tag, and Push Docker Image**:
     
