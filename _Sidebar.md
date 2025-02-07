@@ -1,5 +1,3 @@
-# MemberHub Documentation Overview
-
 ## 📂 Repositories & Workflow
 - [Repositories](https://github.com/eLearning-Plus/MemberHub/wiki/Repositories)  
 - [🚀 GitHub Workflow Guide](https://github.com/eLearning-Plus/MemberHub/wiki/%F0%9F%9A%80-GitHub-Workflow-Guide)
