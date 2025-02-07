@@ -5,7 +5,7 @@ To update the current version and force the frontend to load the latest version,
 ## Step 2: Access GraphiQL
 - Open your browser and go to.
    - [`staging`](https://staging.zanda360.com/graphiql)
-   - [`production`](https://zanda360.com/graphiql)
+   - [`production`](https://app.zanda360.com/graphiql)
 
 ## Step 3: Run Mutation
 - In the GraphiQL editor, search for the mutation `updateCurrentVersion`.
