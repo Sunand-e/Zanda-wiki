@@ -52,3 +52,6 @@ Welcome to the Zanda360 Learning Platform documentation.
 ## 🌐 Frontend Notes
 - [Frontend Documentation](https://github.com/eLearning-Plus/MemberHub/wiki/Frontend)
 - [Frontend Tables](https://github.com/eLearning-Plus/MemberHub/wiki/Frontend-Tables)
+
+--- 
+- [Suggest Improvement & Bug fixes](https://github.com/eLearning-Plus/MemberHub/wiki/Additional-Details)
