@@ -50,10 +50,5 @@
 
 ---
 
-## 🔗 Third-Party Integrations
-- [Integrations List](https://github.com/eLearning-Plus/MemberHub/wiki/Third%E2%80%90Party-Integrations)
-
----
-
 ## 🌐 Frontend Notes
 - [Frontend Documentation](https://github.com/eLearning-Plus/MemberHub/wiki/Frontend)
