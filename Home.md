@@ -30,7 +30,7 @@ Welcome to the Zanda360 Learning Platform documentation.
 ## 🚀 Deployment & CI/CD
 - [Deployment & Release Process](https://github.com/eLearning-Plus/MemberHub/wiki/Deployment-and-release-process)  
 - [Update Frontend Version](https://github.com/eLearning-Plus/MemberHub/wiki/Update-Version-using-GraphiQL)  
-- [CI/CD Pipelines & Testing](https://github.com/eLearning-Plus/MemberHub/wiki/CI-CD-pipelines-and-Testing)  
+- [CI/CD Overview](https://github.com/eLearning-Plus/MemberHub/wiki/CI-CD-Process-Overview)  
 - [Debugging on Staging](https://github.com/eLearning-Plus/MemberHub/wiki/Debugging:-Connect-to-Rails-Console-on-Staging-Production)
 
 ---
