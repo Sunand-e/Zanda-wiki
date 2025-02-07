@@ -37,7 +37,7 @@
 ## 📊 Entities & Content
 - **[Tenants](https://github.com/eLearning-Plus/MemberHub/wiki/Tenants)**  
 - **[Users](https://github.com/eLearning-Plus/MemberHub/wiki/Users)**  
-- **Content Items:**  
+- [**Content Items:**](https://github.com/eLearning-Plus/MemberHub/wiki/Content-Items)
   - [Courses](https://github.com/eLearning-Plus/MemberHub/wiki/Courses)  
     - [Sections](https://github.com/eLearning-Plus/MemberHub/wiki/Sections)  
     - [Modules](https://github.com/eLearning-Plus/MemberHub/wiki/Course-modules)  
