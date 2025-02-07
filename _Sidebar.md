@@ -1,7 +1,7 @@
 ### Codebase Access
 
 - [Repositories](https://github.com/eLearning-Plus/MemberHub/wiki/Repositories)
-- [Branching / versioning guidelines](https://github.com/eLearning-Plus/MemberHub/wiki/Branching---versioning-guidelines)
+- [🚀GitHub-Workflow-Guide](https://github.com/eLearning-Plus/MemberHub/wiki/%F0%9F%9A%80-GitHub-Workflow-Guide)
 
 ### Environment Details
 - [Local development setup](https://github.com/eLearning-Plus/MemberHub/wiki/Local-development-setup)
