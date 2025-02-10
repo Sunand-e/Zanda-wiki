@@ -40,7 +40,7 @@ POSTGRES_DB=learning-platform-db
 POSTGRES_HOST=db
 # RAILS_MASTER_KEY - is this required? YES, as the rails credentials.yml.enc file contains the 
 # jwt_secret_key and secret_key_base. These secrets could instead be moved to the .env file, or multi-environment credentials could be used?
-RAILS_MASTER_KEY=
+RAILS_MASTER_KEY=ecd8e7e620ce405c345fd14ebbe1af09
 # The `FRONTEND_DIRECTORY` var is used to mount the static files into the nginx container. Nginx serves the files from its own filesystem.
 # Ensure this directory exists, and when exporting the frontend, ensure the files are placed in the path given in `FRONTEND_DIRECTORY`.
 # The above only applies to the local setup.
