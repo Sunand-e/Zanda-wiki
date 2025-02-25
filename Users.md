@@ -10,7 +10,7 @@ Represents the users and manages their authentication, profile management, and i
 
 ### User roles
 
-A user's role(s) determine what actions they can take at the global (tenant) level, at the group level, and at the content level. Ultimately, it is the role system that is responsible for determining if a user has access to a particular content item. Some pre-defined roles are defined in [lib/json_files/roles.json](https://github.com/eLearning-Plus/MemberHub/blob/main/lib/json_files/roles.json). For a more detailed explanation of the role system, see https://github.com/eLearning-Plus/MemberHub/wiki/Roles-and-Capabilities
+A user's role(s) determine what actions they can take at the global (tenant) level, at the group level, and at the content level. Ultimately, it is the role system that is responsible for determining if a user has access to a particular content item. Some pre-defined roles are defined in [lib/json_files/roles.json](https://github.com/eLearning-Plus/MemberHub/blob/main/lib/json_files/roles.json). For a more detailed explanation of the role system, see https://sunand-e.github.io/Zanda-wiki/Roles-and-Capabilities
 
 - **Tenant-wide** roles determine what capabilities a user has across the whole tenant. For example, a user can have a 'Tenant Admin' role, and that role has the `CreateCourse` capability.
 - **Group-specific** roles determine what capabilities are attached to a user within a particular group - for example, they may have a 'Group Leader' role, which has the `GetUsers` capability. This enables them to see all users who are in the group.

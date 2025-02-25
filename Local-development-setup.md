@@ -1,6 +1,6 @@
 #### Overview
 
-This development setup leverages **Docker Compose** to orchestrate the application and its associated services. The backend is implemented with Rails, proxied by NGINX for request handling, while the frontend has two modes of operation: production (static export) and development. See: https://github.com/eLearning-Plus/MemberHub/wiki/Docker-container-setup for more details.
+This development setup leverages **Docker Compose** to orchestrate the application and its associated services. The backend is implemented with Rails, proxied by NGINX for request handling, while the frontend has two modes of operation: production (static export) and development. See: https://sunand-e.github.io/Zanda-wiki/Docker-container-setup for more details.
 
 #### Frontend
 

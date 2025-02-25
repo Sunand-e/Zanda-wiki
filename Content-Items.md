@@ -22,7 +22,7 @@ An ordered collection of courses and/or resources.
 
 The ContentItemRelationship model defines hierarchical relationships between ContentItems, and allows for ordering of content items within their parent.
 
-See [Content Item Relationships](https://github.com/eLearning-Plus/MemberHub/wiki/Content-Item-Relationships) for more details.
+See [Content Item Relationships](https://sunand-e.github.io/Zanda-wiki/Content-Item-Relationships) for more details.
 
 ## User-Content Relationships
 

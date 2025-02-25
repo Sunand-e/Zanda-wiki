@@ -8,4 +8,4 @@ Refer to the rails [schema.db](https://github.com/eLearning-Plus/MemberHub/blob/
 
 ### Entity relationships
 
-Refer to the [Entities](https://github.com/eLearning-Plus/MemberHub/wiki/Entities) section for a deeper understanding the entities and how they relate to each other.
+Refer to the [Entities](https://sunand-e.github.io/Zanda-wiki/Entities) section for a deeper understanding the entities and how they relate to each other.

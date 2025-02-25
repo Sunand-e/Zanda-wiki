@@ -1,55 +1,55 @@
 ## 📂 Repositories & Workflow
-- [Repositories](https://github.com/eLearning-Plus/MemberHub/wiki/Repositories)  
-- [🚀 GitHub Workflow Guide](https://github.com/eLearning-Plus/MemberHub/wiki/%F0%9F%9A%80-GitHub-Workflow-Guide)
+- [Repositories](https://sunand-e.github.io/Zanda-wiki/Repositories)  
+- [🚀 GitHub Workflow Guide](https://sunand-e.github.io/Zanda-wiki/%F0%9F%9A%80-GitHub-Workflow-Guide)
 
 ---
 
 ## 🛠 Development & Environments
-- [Local Development Setup](https://github.com/eLearning-Plus/MemberHub/wiki/Local-development-setup)  
-- [Staging & Production Environment Details](https://github.com/eLearning-Plus/MemberHub/wiki/Staging-and-production-environment-details)  
-- [Configuration Files](https://github.com/eLearning-Plus/MemberHub/wiki/Configuration-files)
+- [Local Development Setup](https://sunand-e.github.io/Zanda-wiki/Local-development-setup)  
+- [Staging & Production Environment Details](https://sunand-e.github.io/Zanda-wiki/Staging-and-production-environment-details)  
+- [Configuration Files](https://sunand-e.github.io/Zanda-wiki/Configuration-files)
 
 ---
 
 ## 🔗 API Documentation
-- [RESTful API Endpoints](https://github.com/eLearning-Plus/MemberHub/wiki/RESTful-API-endpoints)  
-- [GraphQL Schema & Queries](https://github.com/eLearning-Plus/MemberHub/wiki/GraphQL-schema-and-queries)  
-- [Authentication Mechanisms](https://github.com/eLearning-Plus/MemberHub/wiki/Authentication-mechanisms)  
-- [New User Flow](https://github.com/eLearning-Plus/MemberHub/wiki/New-User-flow)
+- [RESTful API Endpoints](https://sunand-e.github.io/Zanda-wiki/RESTful-API-endpoints)  
+- [GraphQL Schema & Queries](https://sunand-e.github.io/Zanda-wiki/GraphQL-schema-and-queries)  
+- [Authentication Mechanisms](https://sunand-e.github.io/Zanda-wiki/Authentication-mechanisms)  
+- [New User Flow](https://sunand-e.github.io/Zanda-wiki/New-User-flow)
 
 ---
 
 ## 🐳 Docker & Database
-- [Docker Setup & Configuration](https://github.com/eLearning-Plus/MemberHub/wiki/Docker-container-setup)  
-- [Database Schema](https://github.com/eLearning-Plus/MemberHub/wiki/Database-schema)  
-- [Backup & Restoration Processes](https://github.com/eLearning-Plus/MemberHub/wiki/Database-backup-and-restoration-processes)
+- [Docker Setup & Configuration](https://sunand-e.github.io/Zanda-wiki/Docker-container-setup)  
+- [Database Schema](https://sunand-e.github.io/Zanda-wiki/Database-schema)  
+- [Backup & Restoration Processes](https://sunand-e.github.io/Zanda-wiki/Database-backup-and-restoration-processes)
 
 ---
 
 ## 🚀 Deployment & CI/CD
-- [Deployment & Release Process](https://github.com/eLearning-Plus/MemberHub/wiki/Deployment-and-release-process)  
-- [Update Frontend Version](https://github.com/eLearning-Plus/MemberHub/wiki/Update-Version-using-GraphiQL)  
-- [CI/CD Overview](https://github.com/eLearning-Plus/MemberHub/wiki/CI-CD-Process-Overview)  
-- [Debugging on Staging](https://github.com/eLearning-Plus/MemberHub/wiki/Debugging-Connect-to-Rails-Console-on-Staging-Production)
+- [Deployment & Release Process](https://sunand-e.github.io/Zanda-wiki/Deployment-and-release-process)  
+- [Update Frontend Version](https://sunand-e.github.io/Zanda-wiki/Update-Version-using-GraphiQL)  
+- [CI/CD Overview](https://sunand-e.github.io/Zanda-wiki/CI-CD-Process-Overview)  
+- [Debugging on Staging](https://sunand-e.github.io/Zanda-wiki/Debugging-Connect-to-Rails-Console-on-Staging-Production)
 
 ---
 
 ## 📊 Entities & Content
-- **[Tenants](https://github.com/eLearning-Plus/MemberHub/wiki/Tenants)**  
-- **[Users](https://github.com/eLearning-Plus/MemberHub/wiki/Users)**  
-- [**Content Items:**](https://github.com/eLearning-Plus/MemberHub/wiki/Content-Items)
-  - [Courses](https://github.com/eLearning-Plus/MemberHub/wiki/Courses)  
-    - [Sections](https://github.com/eLearning-Plus/MemberHub/wiki/Sections)  
+- **[Tenants](https://sunand-e.github.io/Zanda-wiki/Tenants)**  
+- **[Users](https://sunand-e.github.io/Zanda-wiki/Users)**  
+- [**Content Items:**](https://sunand-e.github.io/Zanda-wiki/Content-Items)
+  - [Courses](https://sunand-e.github.io/Zanda-wiki/Courses)  
+    - [Sections](https://sunand-e.github.io/Zanda-wiki/Sections)  
     - Modules
-      - [Lessons](https://github.com/eLearning-Plus/MemberHub/wiki/Lessons)  
-      - [SCORM Modules](https://github.com/eLearning-Plus/MemberHub/wiki/Scorm-modules)
-- [Groups & Organizations](https://github.com/eLearning-Plus/MemberHub/wiki/Groups-and-Organisations)
+      - [Lessons](https://sunand-e.github.io/Zanda-wiki/Lessons)  
+      - [SCORM Modules](https://sunand-e.github.io/Zanda-wiki/Scorm-modules)
+- [Groups & Organizations](https://sunand-e.github.io/Zanda-wiki/Groups-and-Organisations)
 
 ---
 
 ## 🌐 Frontend Notes
-- [Frontend Documentation](https://github.com/eLearning-Plus/MemberHub/wiki/Frontend)
-- [Frontend Tables](https://github.com/eLearning-Plus/MemberHub/wiki/Frontend-Tables)
+- [Frontend Documentation](https://sunand-e.github.io/Zanda-wiki/Frontend)
+- [Frontend Tables](https://sunand-e.github.io/Zanda-wiki/Frontend-Tables)
 
 --- 
-- [Suggest Improvement & Bug fixes](https://github.com/eLearning-Plus/MemberHub/wiki/Additional-Details)
+- [Suggest Improvement & Bug fixes](https://sunand-e.github.io/Zanda-wiki/Additional-Details)
